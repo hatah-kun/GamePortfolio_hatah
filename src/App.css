@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gemsbuck_thin";
+  src: url("src/assets/Gemsbuck 01 Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gemsbuck_bold";
+  src: url("src/assets/Gemsbuck 01 Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gemsbuck";
+  src: url("src/assets/Gemsbuck 01 Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Gemsbuck", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme("colors.customColor.primary");
+}
+
+@layer components {
+  .nav-btn {
+    @apply border-r-8 border-transparent
+    p-3 flex justify-center font-Gemsbuck_thin 
+    tracking-widest transform -skew-x-12 
+
+  bg-white text-customColor-dark
+    hover:animate-rectBackwards hover:border-customColor-primary
+  active:bg-customColor-primary active:text-white
+  md:border-r-2
+  md:active:bg-white md:active:text-customColor-primary active:border-r-black/50 
+    md:bg-transparent md:text-white
+  md:hover:border-white md:hover:bg-white/10 hover:backdrop-blur-sm
+    transition-all duration-300 ease-in-out;
+  }
+}
