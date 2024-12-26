@@ -23,12 +23,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Galyon";
+  src: url("src/assets/Galyon-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Gemsbuck", sans-serif;
+  font-family: "Galyon";
 }
 
 ::-webkit-scrollbar {
@@ -56,5 +63,13 @@ body {
     active:bg-customColor-primary active:text-white 
     md:border-r-2 md:active:bg-white md:active:text-customColor-primary 
     active:border-r-white md:bg-transparent md:text-white md:hover:border-white md:hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300 ease-in-out;
+  }
+
+  .form-label {
+    @apply text-lg;
+  }
+
+  .form-text-input {
+    @apply bg-black/30 text-white text-lg border-l-2 border-customColor-primary p-2;
   }
 }
