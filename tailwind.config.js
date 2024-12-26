@@ -12,10 +12,10 @@ export default {
 // colors---------------------------------------------
       colors: {
         customColor: {
-          primary: '#b80c09',
-          light: '#6b7280',
+          primary: '#991b1b',
+          light: '#f3f4f6',
           DEFAULT: '#374151',
-          dark: '#141301',
+          dark: '#18181b',
         },
       },
 // fonts---------------------------------------------
