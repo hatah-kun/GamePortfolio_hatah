@@ -1,6 +1,7 @@
 import { Boxes } from "./ui/background-boxes";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import { TbBrandGmail, TbBrandFacebook, TbPhone } from "react-icons/tb";
 
 const MessageForm = () => {
   const [hasName, setHasName] = useState(true);
@@ -48,21 +49,55 @@ const MessageForm = () => {
         <div className="absolute inset-0 w-full h-full bg-customColor-dark z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <Boxes />
 
-        <div className="z-20 flex flex-col border-white/5 border-2 w-5/6">
-          <div className=" bg-customColor-primary p-10">
-            <h1 className="">Lets start something GREAT</h1>
+        <div
+          className="z-20 grid grid-cols-1 border-white/5 border-2 w-5/6
+        md:grid-cols-6 lg:max-w-7xl"
+        >
+          <div className=" bg-customColor-primary p-10 md:col-span-2 v-clip flex flex-col justify-between">
+            <div>
+              <p className="font-Gemsbuck_regular">contact</p>
+              <br />
+              <h1 className="text-white text-3xl text-right font-StylishBold border-r-2 px-2">
+                Let's start <br />
+                something GREAT
+              </h1>
+            </div>
+            <div className="flex gap-1 text-2xl">
+              <button
+                className="flex items-center p-2 hover:bg-black/20"
+                onClick={() => copyToClipboard(0)}
+              >
+                <TbBrandGmail />
+              </button>
+              <button
+                className="flex items-center p-2 hover:bg-black/20"
+                onClick={() => copyToClipboard(1)}
+              >
+                <TbBrandFacebook />
+              </button>
+              <button
+                className="flex items-center p-2 hover:bg-black/20"
+                onClick={() => copyToClipboard(2)}
+              >
+                <TbPhone />
+              </button>
+            </div>
           </div>
           <form
             onSubmit={SendEmail}
-            className="bg-white/5 p-10 backdrop-blur-sm flex flex-col gap-4"
+            className="w-full bg-white/5 p-10 backdrop-blur-sm grid grid-flow-row gap-4
+            md:grid-cols-6 md:col-span-4"
           >
-            <div className="flex flex-col md:flex-row">
-              <label htmlFor="name_input">Name</label>
+            <div className="flex flex-col col-span-6 md:col-span-3">
+              <label className="form-label " htmlFor="name_input">
+                Name
+              </label>
               <input
                 type="text"
                 name="sender_name"
                 id="name_input"
                 className="form-text-input"
+                placeholder="John Doe"
               />
               <span
                 className={`text-sm text-red-600 text-right pointer-events-none ${
@@ -71,13 +106,18 @@ const MessageForm = () => {
               >
                 please input your name.
               </span>
-              <br />
-              <label htmlFor="email_input">Your Email</label>
+            </div>
+
+            <div className="flex flex-col col-span-6 md:col-span-3">
+              <label className="form-label " htmlFor="email_input">
+                Your Email
+              </label>
               <input
                 type="email"
                 name="sender_email"
                 id="email_input"
                 className="form-text-input"
+                placeholder="Doe@mail.com"
               />
               <span
                 className={`text-sm text-red-600 text-right pointer-events-none ${
@@ -88,14 +128,17 @@ const MessageForm = () => {
               </span>
             </div>
 
-            <div className="flex flex-col md:flex-row">
-              <label htmlFor="subject_input">Subject</label>
+            <div className="flex flex-col col-span-6 md:col-span-4">
+              <label className="form-label " htmlFor="subject_input">
+                Subject
+              </label>
 
               <input
                 type="text"
                 name="sender_subject"
                 id="subject_input"
                 className="form-text-input"
+                placeholder="My purpose"
               />
               <span
                 className={`text-sm text-red-600 text-right pointer-events-none ${
@@ -104,13 +147,17 @@ const MessageForm = () => {
               >
                 please input the message subject.
               </span>
-              <br />
-              <label htmlFor="message_input">Message:</label>
+            </div>
 
+            <div className="flex flex-col col-span-6">
+              <label className="form-label " htmlFor="message_input">
+                Message:
+              </label>
               <textarea
                 name="sender_message"
                 id="message_input"
                 className="form-text-input min-h-40"
+                placeholder="Say something..."
               />
               <span
                 className={`text-sm text-red-600 text-right pointer-events-none ${
@@ -120,13 +167,47 @@ const MessageForm = () => {
                 write some message.
               </span>
             </div>
-            <button type="submit" className="bg-customColor-primary px-4 py-1">
+
+            <button
+              type="submit"
+              className="bg-customColor-primary button-Style col-span-6"
+            >
               Send
             </button>
           </form>
         </div>
       </div>
     </div>
+  );
+};
+
+const copyToClipboard = (infoType: number) => {
+  let text;
+  switch (infoType) {
+    case 0:
+      text = "nicolasjohnabielp@gmail.com";
+      break;
+
+    case 1:
+      text = "https://www.facebook.com/nicolashatah";
+      break;
+
+    case 2:
+      text = "+639093712753";
+      break;
+
+    default:
+      text = "nicolasjohnabielp@gmail.com";
+      break;
+  }
+
+  navigator.clipboard.writeText(text).then(
+    () => {
+      console.log("Text copied to clipboard!");
+    },
+    (err) => {
+      console.log("Failed to copy text: ", err);
+    }
   );
 };
 

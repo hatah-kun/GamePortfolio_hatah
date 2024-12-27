@@ -29,10 +29,10 @@ export default {
       },
 // fonts---------------------------------------------
       fontFamily:{
-        Gemsbuck_bold: ['Gemsbuck_bold', 'sans-serif'],
+        StylishBold: ['Gemsbuck_bold', 'sans-serif'],
         Gemsbuck_thin: ['Gemsbuck_thin', 'sans-serif'],
         Gemsbuck_regular: ['Gemsbuck', 'sans-serif'],
-        Gaylon: ['Galyon', 'sans-serif'],
+        NormalFont: ['LogikaNova', 'sans-serif'],
       },
 // keyframes---------------------------------------------
       keyframes: {

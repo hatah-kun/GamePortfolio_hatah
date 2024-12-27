@@ -20,7 +20,7 @@ const NavBar = () => {
           alt="RedCraft Icon"
           className="h-14 w-auto mr-2"
         />
-        <span className="text-white font-Gemsbuck_bold text-xl   md:text-4xl tracking-widest">
+        <span className="text-white font-StylishBold text-xl   md:text-4xl tracking-widest">
           <RandomizedTextEffect text="RedCraft" />
         </span>
       </a>

@@ -30,12 +30,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "LogikaNova";
+  src: url("src/assets/LogikaNova-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Galyon";
+  @apply font-NormalFont;
 }
 
 ::-webkit-scrollbar {
@@ -70,6 +77,28 @@ body {
   }
 
   .form-text-input {
+    clip-path: polygon(calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%, 0 0);
     @apply bg-black/30 text-white text-lg border-l-2 border-customColor-primary p-2;
+  }
+
+  .v-clip {
+    clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+  }
+
+  .button-Style {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 10px) 0,
+      100% 10px,
+      100% 100%,
+      10px 100%,
+      0 calc(100% - 10px)
+    );
+
+    @apply px-4 py-1;
+  }
+
+  .writingMode-v {
+    writing-mode: vertical-lr;
   }
 }
