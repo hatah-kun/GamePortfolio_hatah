@@ -72,8 +72,7 @@ const MessageForm = () => {
               />
               <br />
               <h1 className="text-white text-3xl md:text-5xl text-right font-StylishBold border-r-2 px-2">
-                Let's start <br />
-                something GREAT
+                Let's re-imagine <br /> your game
               </h1>
             </div>
             <div className="flex gap-1 text-3xl">

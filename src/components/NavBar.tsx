@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { BiX } from "react-icons/bi";
-import { RandomizedTextEffect } from "./RandomizeTextEffect";
+import HyperText from "./ui/hyper-text";
 
 const NavBar = () => {
   const [btnDisplay, setBtnDisplay] = useState(false);
@@ -21,7 +21,9 @@ const NavBar = () => {
           className="h-14 w-auto mr-2"
         />
         <span className="text-white font-StylishBold text-xl   md:text-4xl tracking-widest">
-          <RandomizedTextEffect text="RedCraft" />
+          <HyperText as={"p"} duration={2000} className=" font-StylishBold">
+            Redcraft
+          </HyperText>
         </span>
       </a>
 
