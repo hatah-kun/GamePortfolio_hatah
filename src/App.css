@@ -84,6 +84,16 @@ body {
   .v-clip {
     clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
   }
+  .v-clip-v1 {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 10px) 0,
+      100% 10px,
+      100% 100%,
+      10px 100%,
+      0 calc(100% - 10px)
+    );
+  }
 
   .button-Style {
     clip-path: polygon(

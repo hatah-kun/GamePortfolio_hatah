@@ -2,6 +2,8 @@ import { Boxes } from "./ui/background-boxes";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { TbBrandGmail, TbBrandFacebook, TbPhone } from "react-icons/tb";
+import { Toaster, toast } from "sonner";
+import UnderLineLabel from "./ui/UnderLineLabel";
 
 const MessageForm = () => {
   const [hasName, setHasName] = useState(true);
@@ -25,7 +27,7 @@ const MessageForm = () => {
     setHasMessage(!!message);
 
     if (!name || !email || !subject || !message) {
-      alert("All fields are required.");
+      DisplayNotif("Please fill all fields..", 0);
       return;
     }
 
@@ -37,7 +39,7 @@ const MessageForm = () => {
     );
 
     form.reset();
-    alert("Message sent successfully!");
+    DisplayNotif("Message sent!", 1);
   };
 
   return (
@@ -45,24 +47,36 @@ const MessageForm = () => {
       id="contact_sec"
       className="min-h-screen w-full flex justify-center items-center"
     >
+      <Toaster
+        toastOptions={{
+          className:
+            " border-2 border-customColor-primary text-white bg-customColor-dark",
+        }}
+      />
       <div className="h-full relative w-full overflow-hidden bg-customColor-dark flex flex-col items-center justify-center rounded-lg">
         <div className="absolute inset-0 w-full h-full bg-customColor-dark z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <Boxes />
 
         <div
           className="z-20 grid grid-cols-1 border-white/5 border-2 w-5/6
-        md:grid-cols-6 lg:max-w-7xl"
+      md:grid-cols-6 lg:max-w-7xl"
         >
-          <div className=" bg-customColor-primary p-10 md:col-span-2 v-clip flex flex-col justify-between">
+          <div className=" bg-customColor-primary p-10 md:col-span-2 v-clip flex flex-col justify-between border-r border-white/5">
             <div>
-              <p className="font-Gemsbuck_regular">contact</p>
+              {/* <p className="font-Gemsbuck_regular text-xl underline underline-offset-4">
+                contact
+              </p> */}
+              <UnderLineLabel
+                content={"Contact"}
+                class="font-Gemsbuck_regular text-xl"
+              />
               <br />
-              <h1 className="text-white text-3xl text-right font-StylishBold border-r-2 px-2">
+              <h1 className="text-white text-3xl md:text-5xl text-right font-StylishBold border-r-2 px-2">
                 Let's start <br />
                 something GREAT
               </h1>
             </div>
-            <div className="flex gap-1 text-2xl">
+            <div className="flex gap-1 text-3xl">
               <button
                 className="flex items-center p-2 hover:bg-black/20"
                 onClick={() => copyToClipboard(0)}
@@ -86,7 +100,7 @@ const MessageForm = () => {
           <form
             onSubmit={SendEmail}
             className="w-full bg-white/5 p-10 backdrop-blur-sm grid grid-flow-row gap-4
-            md:grid-cols-6 md:col-span-4"
+        md:grid-cols-6 md:col-span-4"
           >
             <div className="flex flex-col col-span-6 md:col-span-3">
               <label className="form-label " htmlFor="name_input">
@@ -183,17 +197,21 @@ const MessageForm = () => {
 
 const copyToClipboard = (infoType: number) => {
   let text;
+  let textNotif: string;
   switch (infoType) {
     case 0:
       text = "nicolasjohnabielp@gmail.com";
+      textNotif = "copied email address to clipboard";
       break;
 
     case 1:
       text = "https://www.facebook.com/nicolashatah";
+      textNotif = "copied facebook profile link to clipboard";
       break;
 
     case 2:
       text = "+639093712753";
+      textNotif = "copied mobile number to clipboard";
       break;
 
     default:
@@ -204,11 +222,32 @@ const copyToClipboard = (infoType: number) => {
   navigator.clipboard.writeText(text).then(
     () => {
       console.log("Text copied to clipboard!");
+      DisplayNotif(textNotif);
     },
     (err) => {
       console.log("Failed to copy text: ", err);
     }
   );
+};
+
+const DisplayNotif = (text: string, type?: number) => {
+  if (type === 0) {
+    toast.error("Warning:", {
+      description: text,
+    });
+    return;
+  }
+
+  if (type === 1) {
+    toast.success("Successful:", {
+      description: text,
+    });
+    return;
+  }
+
+  toast("Notification:", {
+    description: text,
+  });
 };
 
 export default MessageForm;
