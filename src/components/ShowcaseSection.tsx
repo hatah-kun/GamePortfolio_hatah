@@ -7,6 +7,7 @@ import Carousel, {
   // SliderNextButton,
   // SliderPrevButton,
 } from "../components/ui/carousel";
+import { Link } from "react-router-dom";
 // import { ChevronLeft, ChevronRight } from "lucide-react";
 // import UnderLineLabel from "./ui/UnderLineLabel";
 // import Image from 'next/image';
@@ -42,13 +43,21 @@ const ShowcaseSection = () => {
       >
         <SliderContainer>
           <Slider className="sm:w-[55%] w-[90%]">
-            <div className="bg-blue-500 h-[420px] sm:h-full 2xl:h-[450px] rounded-lg"></div>
+            <Link to="/game/kawatNumber1">
+              {" "}
+              {/* Update the link, yang KawatNumber1 dapat same duman sa title para mag route duman tapos boi add mo nalang yang link sa iba*/}
+              <div className="bg-blue-500 h-[420px] sm:h-full 2xl:h-[450px] rounded-lg"></div>
+            </Link>
           </Slider>
           <Slider className="sm:w-[55%] w-[90%]">
-            <div className="bg-green-500 h-[420px] sm:h-full 2xl:h-[450px] rounded-lg"></div>
+            <Link to="/game/kawatNumber2">
+              <div className="bg-green-500 h-[420px] sm:h-full 2xl:h-[450px] rounded-lg"></div>
+            </Link>
           </Slider>
           <Slider className="sm:w-[55%] w-[90%]">
-            <div className="bg-yellow-500 h-[420px] sm:h-full 2xl:h-[450px] rounded-lg"></div>
+            <Link to="/game/kawatNumber3">
+              <div className="bg-yellow-500 h-[420px] sm:h-full 2xl:h-[450px] rounded-lg"></div>
+            </Link>
           </Slider>
           <Slider className="sm:w-[55%] w-[90%]">
             <div className="bg-red-500 h-[420px] sm:h-full 2xl:h-[450px] rounded-lg"></div>
