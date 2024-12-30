@@ -5,13 +5,9 @@ export function ProfileCard() {
     <CardContainer className="inter-var">
       <CardBody
         className=" group/card 
-       w-auto sm:w-[30rem] h-auto p-6 border-customColor-primary border-2
+       w-auto sm:w-[30rem] h-auto border-customColor-primary
        hover:shadow-2xl"
       >
-        <CardItem as="h1" translateZ="60" className=" bg-black">
-          Profile
-        </CardItem>
-
         <div className="flex flex-col justify-center items-center gap-4 relative overflow-hidden">
           <CardItem>
             <img src="/src/assets/playerCard_bg.png" alt="card background" />
