@@ -52,8 +52,8 @@ const NavBar = () => {
         animate-rectBackwards`}
       >
         <NavBtn btnName="Home" target="#home_sec" />
-        <NavBtn btnName="Projects" target="#showcase_sec" />
         <NavBtn btnName="About" target="#skills_sec" />
+        <NavBtn btnName="Projects" target="#showcase_sec" />
         <NavBtn btnName="Contact" target="#contact_sec" />
       </ul>
     </div>

@@ -10,13 +10,17 @@ const IntroSection = () => {
     >
       <RetroGrid opacity={0.12} />
 
-      <div className="h-full w-full flex flex-col items-center justify-center gap-4 relative">
-        <div className="flex justify-between w-full  ">
+      <div className="h-full w-full flex flex-col items-center justify-between md:justify-center gap-4 relative">
+        <div className="flex flex-col m-9  md:flex-row md:justify-between w-full  ">
           <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
             JOHN ABIEL
           </HyperText>
           <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
             Nicolas
+          </HyperText>
+
+          <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
+            PORTFOLIO
           </HyperText>
         </div>
 
@@ -26,7 +30,7 @@ const IntroSection = () => {
           className="h-5/6 absolute bottom-0 filter grayscale opacity-5"
         /> */}
 
-        <div className="w-full flex justify-between absolute bottom-0">
+        <div className="w-full flex flex-col md:flex-row md:justify-between items-center justify-between absolute bottom-0 gap-5">
           <InfoCard />
           <InfoCard />
         </div>
