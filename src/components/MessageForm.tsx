@@ -72,7 +72,7 @@ const MessageForm = () => {
               />
               <br />
               <h1 className="text-white text-3xl md:text-5xl text-right font-StylishBold border-r-2 px-2">
-                Let's re-imagine <br /> your game
+                Together let's build something
               </h1>
             </div>
             <div className="flex gap-1 text-3xl">
@@ -110,20 +110,20 @@ const MessageForm = () => {
                 name="sender_name"
                 id="name_input"
                 className="form-text-input"
-                placeholder="John Doe"
+                placeholder="Your name"
               />
               <span
                 className={`text-sm text-red-600 text-right pointer-events-none ${
                   !hasName ? "block" : "hidden"
                 }`}
               >
-                please input your name.
+                Please input your name.
               </span>
             </div>
 
             <div className="flex flex-col col-span-6 md:col-span-3">
               <label className="form-label " htmlFor="email_input">
-                Your Email
+                Email
               </label>
               <input
                 type="email"
@@ -137,7 +137,7 @@ const MessageForm = () => {
                   !hasEmail ? "block" : "hidden"
                 }`}
               >
-                please input your email.
+                Please input a valid email.
               </span>
             </div>
 
@@ -158,7 +158,7 @@ const MessageForm = () => {
                   !hasSubject ? "block" : "hidden"
                 }`}
               >
-                please input the message subject.
+                Please input subject.
               </span>
             </div>
 
@@ -177,7 +177,7 @@ const MessageForm = () => {
                   !hasMessage ? "block" : "hidden"
                 }`}
               >
-                write some message.
+                Please write some message.
               </span>
             </div>
 
@@ -200,17 +200,17 @@ const copyToClipboard = (infoType: number) => {
   switch (infoType) {
     case 0:
       text = "nicolasjohnabielp@gmail.com";
-      textNotif = "copied email address to clipboard";
+      textNotif = "Email address copied to clipboard";
       break;
 
     case 1:
       text = "https://www.facebook.com/nicolashatah";
-      textNotif = "copied facebook profile link to clipboard";
+      textNotif = "Facebook profile link copied to clipboard";
       break;
 
     case 2:
       text = "+639093712753";
-      textNotif = "copied mobile number to clipboard";
+      textNotif = "Mobile number copied to clipboard";
       break;
 
     default:

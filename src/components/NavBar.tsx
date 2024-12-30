@@ -21,7 +21,12 @@ const NavBar = () => {
           className="h-14 w-auto mr-2"
         />
         <span className="text-white font-StylishBold text-xl   md:text-4xl tracking-widest">
-          <HyperText as={"p"} duration={2000} className=" font-StylishBold">
+          <HyperText
+            as={"p"}
+            startOnView={false}
+            duration={1000}
+            className=" font-StylishBold"
+          >
             Redcraft
           </HyperText>
         </span>
