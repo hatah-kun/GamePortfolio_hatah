@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { BiX } from "react-icons/bi";
+import HyperText from "./ui/hyper-text";
 
 const NavBar = () => {
   const [btnDisplay, setBtnDisplay] = useState(false);
@@ -19,8 +20,15 @@ const NavBar = () => {
           alt="RedCraft Icon"
           className="h-14 w-auto mr-2"
         />
-        <span className="text-white font-Gemsbuck_bold text-xl   md:text-4xl tracking-widest">
-          RedCraft
+        <span className="text-white font-StylishBold text-xl   md:text-4xl tracking-widest">
+          <HyperText
+            as={"p"}
+            startOnView={false}
+            duration={1000}
+            className=" font-StylishBold"
+          >
+            Redcraft
+          </HyperText>
         </span>
       </a>
 
@@ -45,7 +53,7 @@ const NavBar = () => {
       >
         <NavBtn btnName="Home" target="#home_sec" />
         <NavBtn btnName="Projects" target="#showcase_sec" />
-        <NavBtn btnName="Know me more" target="#skills_sec" />
+        <NavBtn btnName="About" target="#skills_sec" />
         <NavBtn btnName="Contact" target="#contact_sec" />
       </ul>
     </div>
