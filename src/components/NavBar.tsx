@@ -16,7 +16,7 @@ const NavBar = () => {
       {/* <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/70 via-transparent to-transparent z-40"></div> */}
       <a href="/" className="flex items-center z-50">
         <img
-          src="src/assets/RedCraft_icon.png"
+          src="https://res.cloudinary.com/dwxnjoocx/image/upload/v1735530211/RedCraft_icon_losi65.png"
           alt="RedCraft Icon"
           className="h-14 w-auto mr-2"
         />
