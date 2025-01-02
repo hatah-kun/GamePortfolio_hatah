@@ -22,7 +22,7 @@ export function ProfileCard() {
 
           <CardItem className="absolute bottom-0 left-0" translateZ="100">
             <img
-              src="/src/assets/NICOLAS_VectorArt.png"
+              src="src/assets/NICOLAS_VectorArt.png"
               alt="card background"
               className="group-hover/card:shadow-xl"
             />
