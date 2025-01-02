@@ -1,5 +1,6 @@
 import HyperText from "./ui/hyper-text";
 import RetroGrid from "./ui/retro-grid";
+import TypingAnimation from "./ui/typing-animation";
 
 const IntroSection = () => {
   return (
@@ -10,7 +11,7 @@ const IntroSection = () => {
     >
       <RetroGrid opacity={0.12} />
 
-      <div className="h-full w-full flex flex-col items-center justify-between md:justify-center gap-4 relative">
+      <div className="h-full w-full flex flex-col items-center justify-center gap-4 relative">
         <div className="flex flex-col m-9  md:flex-row md:justify-between w-full  ">
           <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
             JOHN ABIEL
@@ -32,7 +33,6 @@ const IntroSection = () => {
 
         <div className="w-full flex flex-col md:flex-row md:justify-between items-center justify-between absolute bottom-0 gap-5">
           <InfoCard />
-          <InfoCard />
         </div>
       </div>
     </div>
@@ -48,14 +48,15 @@ const InfoCard = () => {
         animateOnHover={false}
         startOnView={true}
       >
-        about
+        Info
       </HyperText>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
-        dolores iusto explicabo beatae, possimus quam veritatis sit esse, sint
-        commodi itaque voluptatem! Qui commodi blanditiis, aut nam ab quos.
-        Quas?
-      </p>
+      <TypingAnimation
+        startOnView={true}
+        className="text-lg font-Gemsbuck_thin"
+      >
+        An evolving collection of memories and experiences from my journey as a
+        game developer.
+      </TypingAnimation>
     </div>
   );
 };
