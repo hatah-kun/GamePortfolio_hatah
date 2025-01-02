@@ -49,7 +49,6 @@ const InfoSection = () => {
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const TabContainer = () => {
   const tabBtnStyle: string =
     "rounded-none text-lg font-Gemsbuck_regular h-full md:px-10  hover:bg-black/20 border-x border-black";

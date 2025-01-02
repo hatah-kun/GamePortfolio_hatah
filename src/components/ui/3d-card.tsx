@@ -33,14 +33,11 @@ export const CardContainer = ({
     const y = (e.clientY - top - height / 2) / 25;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseEnter = () => {
     setIsMouseEntered(true);
     if (!containerRef.current) return;
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseLeave = () => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
@@ -156,6 +153,7 @@ export const CardItem = ({
 };
 
 // Create a hook to use the context
+// eslint-disable-next-line react-refresh/only-export-components
 export const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
   if (context === undefined) {

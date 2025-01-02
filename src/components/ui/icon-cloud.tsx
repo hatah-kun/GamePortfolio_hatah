@@ -15,6 +15,7 @@ export type DynamicCloudProps = {
   imageArray?: string[];
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
     style: {
@@ -42,11 +43,13 @@ export const cloudProps: Omit<ICloud, "children"> = {
   },
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const renderCustomIcon = (
   icon: SimpleIcon,
   theme: string,
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  imageArray?: string[]
+  _imageArray?: string[]
 ) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
