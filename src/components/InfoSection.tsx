@@ -7,6 +7,7 @@ import {
 } from "../components/ui/tabs";
 import TypingAnimation from "./ui/typing-animation";
 import IconCloud from "./ui/icon-cloud";
+import { HiOutlineDownload } from "react-icons/hi";
 
 const InfoSection = () => {
   return (
@@ -22,7 +23,16 @@ const InfoSection = () => {
         />
       </div>
 
-      <div className="md:w-8/12 min-h-full flex flex-col justify-center gap-4  p-6  bg-customColor-primary">
+      <div className="md:w-8/12 min-h-full flex flex-col justify-center gap-4  p-6  bg-customColor-primary relative">
+        <div
+          className="bg-customColor-primary w-14 h-80 absolute top-0 -left-[40px] hidden md:block"
+          style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 80%)" }}
+        ></div>
+
+        <div
+          className="bg-customColor-primary w-80 h-14 absolute -top-[40px] left-0 block md:hidden"
+          style={{ clipPath: "polygon(0 0, 80% 0, 100% 100%, 0 100%)" }}
+        ></div>
         <div className="border-b-4 border-black text-black p-4">
           <p className="bg-white text-black font-bold font-Gemsbuck_regular v-clip-v1 w-fit px-5 py-3">
             Developer
@@ -39,9 +49,10 @@ const InfoSection = () => {
 
         <TabContainer />
         <button
-          className="bg-black w-fit button-Style font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black"
+          className="bg-black w-fit button-Style font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black flex gap-2"
           onClick={DownloadResume}
         >
+          <HiOutlineDownload className="text-xl" />
           Download Resume
         </button>
       </div>
@@ -79,7 +90,7 @@ const TabContainer = () => {
           </TypingAnimation>
           <p>
             As I take my journey to become a game developer, I have acquired a
-            set of skills that I believe are essential to creating engaging and
+            set of skills that I believe are essential to create engaging and
             immersive game experiences. Here are some of the skills that I have
             developed over the years:
           </p>
@@ -177,11 +188,11 @@ const TabContainer = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-black/10 p-3 ">
+          <div className="bg-black/10 p-3 border-l-4 border-black">
             <p>
-              I also have a foundational background in web development, working
-              with HTML, JavaScript, CSS, PHP, SQL, React, TypeScript, and
-              Tailwind.
+              In addition, I also have a foundational background in web
+              development, working with HTML, JavaScript, CSS, PHP, SQL, React,
+              TypeScript, and Tailwind.
             </p>
           </div>
         </div>
@@ -248,7 +259,7 @@ const ContentCard = ({
 
 const DownloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/src/assets/JohnAbielNicolas_Resume.pdf";
+  link.href = "/src/assets/NicolasJohnAbiel_GameDev - Resume.pdf";
   link.download = "JohnAbielNicolas_Resume.pdf";
   link.click();
 };

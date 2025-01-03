@@ -59,7 +59,7 @@ const MessageForm = () => {
 
         <div
           className="z-20 grid grid-cols-1 border-white/5 border-2 w-5/6
-      md:grid-cols-6 lg:max-w-7xl"
+                     md:grid-cols-6 lg:max-w-7xl"
         >
           <div className=" bg-customColor-primary p-10 md:col-span-2 v-clip flex flex-col justify-between border-r border-white/5">
             <div>
@@ -183,9 +183,9 @@ const MessageForm = () => {
 
             <button
               type="submit"
-              className="bg-customColor-primary button-Style col-span-6"
+              className="bg-customColor-primary button-Style col-span-6 w-fit"
             >
-              Send
+              Send Message
             </button>
           </form>
         </div>
