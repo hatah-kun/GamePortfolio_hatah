@@ -1,6 +1,6 @@
 import UnderLineLabel from "./ui/UnderLineLabel";
 import { VscUnmute, VscMute } from "react-icons/vsc";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ShowcaseSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
