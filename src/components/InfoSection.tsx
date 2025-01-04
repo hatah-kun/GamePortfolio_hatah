@@ -17,7 +17,7 @@ const InfoSection = () => {
     >
       <div className="min-h-full md:w-4/12 flex items-end justify-center">
         <img
-          src="src/assets/NICOLAS_VectorArt.png"
+          src="/src/assets/NICOLAS_VectorArt.png"
           alt="profile picture"
           className="max-h-full"
         />
