@@ -32,14 +32,20 @@ const IntroSection = () => {
         /> */}
 
         <div className="w-full flex flex-col md:flex-row md:justify-between items-center justify-between absolute bottom-0 gap-5">
-          <InfoCard />
+          <InfoCard
+            title="Info"
+            content=" An evolving collection of memories and experiences from my journey as a
+        game developer."
+          />
+
+          <InfoCard title="Message" content="Ready to comply..." />
         </div>
       </div>
     </div>
   );
 };
 
-const InfoCard = () => {
+const InfoCard = ({ title, content }: { title: string; content: string }) => {
   return (
     <div className="w-72 flex flex-col gap-2">
       <HyperText
@@ -48,14 +54,13 @@ const InfoCard = () => {
         animateOnHover={false}
         startOnView={true}
       >
-        Info
+        {title}
       </HyperText>
       <TypingAnimation
         startOnView={true}
         className="text-lg font-Gemsbuck_thin"
       >
-        An evolving collection of memories and experiences from my journey as a
-        game developer.
+        {content}
       </TypingAnimation>
     </div>
   );
