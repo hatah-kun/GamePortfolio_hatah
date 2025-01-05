@@ -320,7 +320,7 @@ const games = [
       "A 2D vertical scrolling shooting game inspired by the retro classic, 'Tween Bee'. Defend the Earth by shooting alien ships that are conquering our world.",
     duration: "1 week",
     poster:
-      "/src/assets/GamePoster/GAME DEVELOPMENT_JOHN ABIEL NICOLAS_COVER ART FILE (portrait).jpg",
+      "../src/assets/GamePoster/GAME DEVELOPMENT_JOHN ABIEL NICOLAS_COVER ART FILE (portrait).jpg",
     background:
       "https://res.cloudinary.com/dwxnjoocx/video/upload/v1735907076/GAME_DEVELOPMENT_JOHN_ABIEL_NICOLAS_GAME_DEMO_VIDEO_FILE_oc64oa.mp4",
     screenshots: [
@@ -339,9 +339,9 @@ const games = [
       "2D side-scrolling adventure game where you will take on the journey of Raina to find his way back home.",
     duration: "1 month",
     poster:
-      "/src/assets/GamePoster/GAME DEVELOPMENT_Patrick Eugene Nolasco_COVER ART FILE (portrait).jpg",
+      "../src/assets/GamePoster/GAME DEVELOPMENT_Patrick Eugene Nolasco_COVER ART FILE (portrait).jpg",
     background:
-      "/src/assets/GamePoster/GAME DEVELOPMENT_Patrick Eugene Nolasco_COVER ART FILE (portrait).jpg",
+      "../src/assets/GamePoster/GAME DEVELOPMENT_Patrick Eugene Nolasco_COVER ART FILE (portrait).jpg",
     screenshots: ["", "", ""],
     role: "Developer, Level Designer, Asset Creator",
     platform: "PC",
@@ -353,8 +353,8 @@ const games = [
     description:
       "A 2D top-down shooter where you will fight off waves of dark creatures while protecting your fidgety baby.",
     duration: "1 week",
-    poster: "/src/assets/GamePoster/Guadian_Poster(portrait).jpg",
-    background: "/src/assets/GamePoster/Guadian_Poster(portrait).jpg",
+    poster: "../src/assets/GamePoster/Guadian_Poster(portrait).jpg",
+    background: "../src/assets/GamePoster/Guadian_Poster(portrait).jpg",
     screenshots: ["", "", ""],
     role: "Developer, Level Designer, Asset Creator",
     platform: "PC",
