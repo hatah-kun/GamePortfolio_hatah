@@ -2,6 +2,9 @@ import UnderLineLabel from "./ui/UnderLineLabel";
 import { VscUnmute, VscMute } from "react-icons/vsc";
 import { useState } from "react";
 
+//posters
+import prototypeDefenderPoster from "../assets/GamePoster/GAME DEVELOPMENT_JOHN ABIEL NICOLAS_COVER ART FILE (portrait).jpg";
+
 const ShowcaseSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [screenShotLink, setScreenShotLink] = useState("");
@@ -319,8 +322,7 @@ const games = [
     description:
       "A 2D vertical scrolling shooting game inspired by the retro classic, 'Tween Bee'. Defend the Earth by shooting alien ships that are conquering our world.",
     duration: "1 week",
-    poster:
-      "../src/assets/GamePoster/GAME DEVELOPMENT_JOHN ABIEL NICOLAS_COVER ART FILE (portrait).jpg",
+    poster: prototypeDefenderPoster,
     background:
       "https://res.cloudinary.com/dwxnjoocx/video/upload/v1735907076/GAME_DEVELOPMENT_JOHN_ABIEL_NICOLAS_GAME_DEMO_VIDEO_FILE_oc64oa.mp4",
     screenshots: [
