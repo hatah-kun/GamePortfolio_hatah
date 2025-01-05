@@ -45,17 +45,17 @@ const MessageForm = () => {
   return (
     <div
       id="contact_sec"
-      className="min-h-screen w-full flex justify-center items-center"
+      className="h-screen w-full flex justify-center items-center"
     >
-      <Toaster
-        toastOptions={{
-          className:
-            " border-2 border-customColor-primary text-white bg-customColor-dark",
-        }}
-      />
       <div className="h-full relative w-full overflow-hidden bg-customColor-dark flex flex-col items-center justify-center rounded-lg">
         <div className="absolute inset-0 w-full h-full bg-customColor-dark z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <Boxes />
+        <Toaster
+          toastOptions={{
+            className:
+              " border-2 border-customColor-primary text-white bg-customColor-dark",
+          }}
+        />
 
         <div
           className="z-20 grid grid-cols-1 border-white/5 border-2 w-5/6

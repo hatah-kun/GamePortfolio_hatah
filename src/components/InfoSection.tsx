@@ -1,4 +1,5 @@
 // import { ProfileCard } from "./ui/ProfileCard";
+import ImageAssets from "./AssetContainer";
 import {
   Tabs,
   TabsContent,
@@ -13,48 +14,53 @@ const InfoSection = () => {
   return (
     <div
       id="skills_sec"
-      className={`min-h-screen w-full flex flex-col md:flex-row justify-between items-center relative `}
+      className={`min-h-screen w-full flex justify-center items-center relative `}
     >
-      <div className="min-h-full md:w-4/12 flex items-end justify-center">
-        <img
-          src="/src/assets/NICOLAS_VectorArt.png"
-          alt="profile picture"
-          className="max-h-full"
-        />
-      </div>
+      <div
+        className={`h-fit w-fit flex flex-col md:flex-row justify-end  relative `}
+      >
+        <div className="md:w-fit min-h-full flex flex-col justify-end gap-4  p-6 bg-customColor-primary relative">
+          <div
+            className="bg-customColor-primary w-14 h-80 absolute top-0 -left-[40px] hidden md:block"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 80%)" }}
+          ></div>
 
-      <div className="md:w-8/12 min-h-full flex flex-col justify-center gap-4  p-6  bg-customColor-primary relative">
-        <div
-          className="bg-customColor-primary w-14 h-80 absolute top-0 -left-[40px] hidden md:block"
-          style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 80%)" }}
-        ></div>
+          <div
+            className="bg-customColor-primary w-80 h-14 absolute -top-[40px] left-0 block md:hidden"
+            style={{ clipPath: "polygon(0 0, 80% 0, 100% 100%, 0 100%)" }}
+          ></div>
+          <div className="border-b-4 border-black text-black p-4">
+            <p className="bg-white text-black font-bold font-Gemsbuck_regular v-clip-v1 w-fit px-5 py-3">
+              Programmer
+            </p>
+            <h1 className="text-8xl font-StylishBold mt-6">
+              JOHN ABIEL <br /> NICOLAS
+            </h1>
+            <p>
+              A developer dedicated to crafting immersive and interactive game
+              experiences, built on a foundation of creativity and technical
+              proficiency.
+            </p>
+          </div>
 
-        <div
-          className="bg-customColor-primary w-80 h-14 absolute -top-[40px] left-0 block md:hidden"
-          style={{ clipPath: "polygon(0 0, 80% 0, 100% 100%, 0 100%)" }}
-        ></div>
-        <div className="border-b-4 border-black text-black p-4">
-          <p className="bg-white text-black font-bold font-Gemsbuck_regular v-clip-v1 w-fit px-5 py-3">
-            Developer
-          </p>
-          <h1 className="text-8xl text-black font-StylishBold mt-6">
-            JOHN ABIEL <br /> NICOLAS
-          </h1>
-          <p>
-            A developer dedicated to crafting immersive and interactive game
-            experiences, built on a foundation of creativity and technical
-            proficiency.
-          </p>
+          <TabContainer />
+          <button
+            className="bg-black w-fit button-Style font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black flex gap-2"
+            onClick={DownloadResume}
+          >
+            <HiOutlineDownload className="text-xl" />
+            Download Resume
+          </button>
         </div>
 
-        <TabContainer />
-        <button
-          className="bg-black w-fit button-Style font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black flex gap-2"
-          onClick={DownloadResume}
-        >
-          <HiOutlineDownload className="text-xl" />
-          Download Resume
-        </button>
+        <div className="min-h-full md:w-4/12 flex items-end justify-center bg-customColor-primary">
+          <img
+            src={ImageAssets.Other.profile}
+            alt="profile picture"
+            className="max-h-full"
+            style={{ filter: "drop-shadow(10px 10px 0px rgba(0, 0, 0, 0.5))" }}
+          />
+        </div>
       </div>
     </div>
   );
@@ -65,7 +71,7 @@ const TabContainer = () => {
     "rounded-none text-lg font-Gemsbuck_regular h-full md:px-10  hover:bg-black/20 border-x border-black";
 
   const tabContainerStyle: string =
-    "rounded-none mt-3 overflow-y-scroll max-h-96 h-[770px]  p-5 flex flex-col gap-5";
+    "rounded-none mt-3 overflow-y-scroll max-h-96 h-[770px] min-w-full p-5 flex flex-col gap-5";
 
   return (
     <Tabs defaultValue="Skills" className="max-w-6xl min-h-fit ">
@@ -259,7 +265,7 @@ const ContentCard = ({
 
 const DownloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/src/assets/NicolasJohnAbiel_GameDev - Resume.pdf";
+  link.href = ImageAssets.Other.resume;
   link.download = "JohnAbielNicolas_Resume.pdf";
   link.click();
 };
