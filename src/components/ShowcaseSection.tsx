@@ -1,6 +1,7 @@
 import UnderLineLabel from "./ui/UnderLineLabel";
 import { VscUnmute, VscMute } from "react-icons/vsc";
 import { useState } from "react";
+import ImageAssets from "./AssetContainer";
 
 const ShowcaseSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -319,8 +320,7 @@ const games = [
     description:
       "A 2D vertical scrolling shooting game inspired by the retro classic, 'Tween Bee'. Defend the Earth by shooting alien ships that are conquering our world.",
     duration: "1 week",
-    poster:
-      "/src/assets/GamePoster/GAME DEVELOPMENT_JOHN ABIEL NICOLAS_COVER ART FILE (portrait).jpg",
+    poster: ImageAssets.PrototypeDefender.poster,
     background:
       "https://res.cloudinary.com/dwxnjoocx/video/upload/v1735907076/GAME_DEVELOPMENT_JOHN_ABIEL_NICOLAS_GAME_DEMO_VIDEO_FILE_oc64oa.mp4",
     screenshots: [
@@ -328,7 +328,7 @@ const games = [
       "https://res.cloudinary.com/dwxnjoocx/image/upload/v1735964179/PrototypeDefenderSS-3_svw2ig.png",
       "https://res.cloudinary.com/dwxnjoocx/image/upload/v1735964179/PrototypeDefenderSS-2_whxbv0.png",
     ],
-    role: "Developer, Level Designer, Asset Creator",
+    role: "Full-Stack",
     platform: "PC",
     projectType: "Solo",
   },
@@ -338,10 +338,8 @@ const games = [
     description:
       "2D side-scrolling adventure game where you will take on the journey of Raina to find his way back home.",
     duration: "1 month",
-    poster:
-      "/src/assets/GamePoster/GAME DEVELOPMENT_Patrick Eugene Nolasco_COVER ART FILE (portrait).jpg",
-    background:
-      "/src/assets/GamePoster/GAME DEVELOPMENT_Patrick Eugene Nolasco_COVER ART FILE (portrait).jpg",
+    poster: ImageAssets.URan.poster,
+    background: ImageAssets.URan.poster,
     screenshots: ["", "", ""],
     role: "Developer, Level Designer, Asset Creator",
     platform: "PC",
@@ -353,10 +351,10 @@ const games = [
     description:
       "A 2D top-down shooter where you will fight off waves of dark creatures while protecting your fidgety baby.",
     duration: "1 week",
-    poster: "/src/assets/GamePoster/Guadian_Poster(portrait).jpg",
-    background: "/src/assets/GamePoster/Guadian_Poster(portrait).jpg",
+    poster: ImageAssets.Guardian.poster,
+    background: ImageAssets.Guardian.poster,
     screenshots: ["", "", ""],
-    role: "Developer, Level Designer, Asset Creator",
+    role: "Full-Stack",
     platform: "PC",
     projectType: "Solo",
   },
