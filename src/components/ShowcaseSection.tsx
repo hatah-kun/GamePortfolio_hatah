@@ -366,9 +366,9 @@ const games = [
     poster: ImageAssets.KeysCreeps.poster,
     background: ImageAssets.KeysCreeps.trailer,
     screenshots: ["", "", ""],
-    role: "Full-Stack",
+    role: "Developer, Level Designer",
     platform: "PC",
-    projectType: "Solo",
+    projectType: "Group",
   },
 ];
 
