@@ -1,9 +1,11 @@
 import UnderLineLabel from "./ui/UnderLineLabel";
 import { VscUnmute, VscMute } from "react-icons/vsc";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import ImageAssets from "./AssetContainer";
 
 const ShowcaseSection = () => {
+  //modal variables
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [screenShotLink, setScreenShotLink] = useState("");
   const handleOpenModal = (imgSrc: string) => {
@@ -12,10 +14,13 @@ const ShowcaseSection = () => {
   };
   const handleCloseModal = () => setIsModalOpen(false);
 
+  const [isInfoShow, setIsInfoShow] = useState(true);
+  const [isVideoMute, setIsVideoMute] = useState(true);
+
   return (
     <div
       id="showcase_sec"
-      className={`h-screen w-full flex flex-col justify-center items-center `}
+      className={`h-screen w-full flex flex-row justify-center items-center`}
     >
       <ImageModal
         imgSrc={screenShotLink}
@@ -24,12 +29,12 @@ const ShowcaseSection = () => {
         onClose={handleCloseModal}
       />
 
-      <div className="h-3/4 w-3/4 flex flex-col items-center justify-center gap-4">
+      <div className="h-3/4 w-4/5 flex flex-col items-center justify-center gap-4">
         <div className=" w-full bg-customColor-primary v-clip-v1 p-6 flex flex-col md:flex-row justify-between items-center">
           <div>
             <UnderLineLabel
               content="ARCHIVE GAMES"
-              class="text-4xl text-black font-Gemsbuck_regular"
+              class="text-5xl text-black font-Gemsbuck_regular"
             />
             <p className="text-black">
               The products of my passion and dedication to learn the craft of
@@ -48,12 +53,30 @@ const ShowcaseSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 flex-grow w-full">
-          <div className=" col-span-4 bg-white/10 w-full relative flex flex-col items-center justify-center gap-4  group ">
-            <div
-              className="bg-customColor-primary w-80 h-14 absolute bottom-0 right-0 "
-              style={{ clipPath: "polygon(0 0, 100% 0, 70% 100%, 0% 100%)" }}
-            ></div>
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 flex-grow w-full">
+          <div className=" col-span-4 bg-white/10 w-full relative flex flex-col items-center justify-center  group ">
+            <div className="absolute top-4 right-4 bg-black/30 text-white z-40 flex">
+              <button
+                id="muteBtn"
+                onClick={() => {
+                  setIsVideoMute(ControlVideoAudio());
+                }}
+                className="text-xl p-2"
+              >
+                {isVideoMute ? <VscMute /> : <VscUnmute />}
+              </button>
+
+              <button
+                id="muteBtn"
+                onClick={() => {
+                  setIsInfoShow(ShowGameInfo());
+                }}
+                className="text-xl p-2"
+              >
+                {isInfoShow ? <FaRegEye /> : <FaRegEyeSlash />}
+              </button>
+            </div>
+
             <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center  z-0 bg-black border-b-4 border-customColor-primary overflow-hidden">
               <img id="gameBG" alt="Game Background" className="w-full" />
 
@@ -68,10 +91,11 @@ const ShowcaseSection = () => {
             </div>
 
             <div
-              className="z-10 bg-gradient-to-tr from-black/70 via-transparent to-transparent p-4 absolute top-0 left-0 w-full h-full 
-            flex flex-col justify-end opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 transition-all duration-300"
+              id="gameInfoGroup"
+              className="z-10 bg-gradient-to-r from-black/85 via-transparent to-transparent p-10 absolute top-0 left-0 w-full h-full 
+            flex flex-col justify-between items-center transition-all duration-300"
             >
-              <div className="w-1/2 flex flex-col gap-4">
+              <div className="self-start my-auto w-1/2 flex flex-col gap-4">
                 <h1 id="gameTitle" className="text-5xl">
                   Game Title
                 </h1>
@@ -106,12 +130,12 @@ const ShowcaseSection = () => {
                 </div>
               </div>
 
-              <div className="flex flex-row justify-center items-center gap-3  self-end ">
+              <div className="flex flex-row justify-center items-center gap-4 self-start z-10">
                 <img
                   src=""
                   alt="game screen shot"
                   id="gameSS1"
-                  className="w-[150px] h-[80px] hover:-translate-y-2 transition-all duration-300"
+                  className="w-[180px] h-[100px] hover:-translate-y-2 transition-all duration-300"
                   onClick={(event) =>
                     handleOpenModal((event.target as HTMLImageElement).src)
                   }
@@ -120,7 +144,7 @@ const ShowcaseSection = () => {
                   src=""
                   alt="game screen shot"
                   id="gameSS2"
-                  className="w-[150px] h-[80px] hover:-translate-y-2 transition-all duration-300"
+                  className="w-[180px] h-[100px] hover:-translate-y-2 transition-all duration-300"
                   onClick={(event) =>
                     handleOpenModal((event.target as HTMLImageElement).src)
                   }
@@ -129,30 +153,12 @@ const ShowcaseSection = () => {
                   src=""
                   alt="game screen shot"
                   id="gameSS3"
-                  className="w-[150px] h-[80px] hover:-translate-y-2 transition-all duration-300"
+                  className="w-[180px] h-[100px] hover:-translate-y-2 transition-all duration-300"
                   onClick={(event) =>
                     handleOpenModal((event.target as HTMLImageElement).src)
                   }
                 />
               </div>
-
-              <button
-                id="muteBtn"
-                onClick={() => {
-                  const video = document.getElementById(
-                    "videoBg"
-                  ) as HTMLVideoElement;
-                  video.muted = !video.muted;
-                }}
-                className="absolute top-4 right-4 bg-black/30 text-white text-lg p-2"
-              >
-                {(document.getElementById("videoBg") as HTMLVideoElement)
-                  ?.muted ? (
-                  <VscMute />
-                ) : (
-                  <VscUnmute />
-                )}
-              </button>
             </div>
           </div>
 
@@ -160,15 +166,35 @@ const ShowcaseSection = () => {
             <h1 className="text-5xl font-Gemsbuck_regular bg-white text-black p-6 v-clip-v1">
               Made with UNITY
             </h1>
-            <ul className=" flex-grow flex flex-col gap-4 p-4 border-t-2 border-customColor-primary bg-black/10 overflow-y-scroll mt-4">
-              <DisplayGameList />
-            </ul>
+
+            <DisplayGameList />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+function ControlVideoAudio() {
+  const video = document.getElementById("videoBg") as HTMLVideoElement;
+  video.muted = !video.muted;
+
+  return video.muted;
+}
+
+function ShowGameInfo() {
+  const infoGroup = document.getElementById("gameInfoGroup") as HTMLElement;
+  let isShow = false;
+  if (infoGroup.style.display === "none") {
+    infoGroup.style.display = "flex";
+    isShow = true;
+  } else {
+    infoGroup.style.display = "none";
+    isShow = false;
+  }
+
+  return isShow;
+}
 
 const GameListBtn = ({
   title,
@@ -206,16 +232,18 @@ const GameListBtn = ({
 
 const DisplayGameList = () => {
   return (
-    <li>
+    <ul className=" flex-grow flex flex-col gap-4 p-4 border-t-2 border-customColor-primary bg-black/10 overflow-y-scroll mt-4">
       {games.map((game, index) => (
-        <GameListBtn
-          title={game.title}
-          genre={game.genre}
-          cover={game.poster}
-          code={index}
-        />
+        <li key={index}>
+          <GameListBtn
+            title={game.title}
+            genre={game.genre}
+            cover={game.poster}
+            code={index}
+          />
+        </li>
       ))}
-    </li>
+    </ul>
   );
 };
 

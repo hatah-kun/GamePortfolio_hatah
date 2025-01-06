@@ -38,7 +38,7 @@ const IntroSection = () => {
         game developer."
           />
 
-          <InfoCard title="Message" content="Ready to comply..." />
+          <InfoCard title="Status" content="Ready to comply..." />
         </div>
       </div>
     </div>
