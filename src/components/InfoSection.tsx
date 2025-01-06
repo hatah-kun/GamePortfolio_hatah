@@ -68,13 +68,13 @@ const InfoSection = () => {
 
 const TabContainer = () => {
   const tabBtnStyle: string =
-    "rounded-none text-lg font-Gemsbuck_regular h-full md:px-10  hover:bg-black/20 border-x border-black";
+    "rounded-none text-lg font-Gemsbuck_regular h-full md:px-10  hover:bg-black/20 border-x border-black active:bg-black active:text-customColor-primary";
 
   const tabContainerStyle: string =
     "rounded-none mt-3 overflow-y-scroll max-h-96 h-[770px] min-w-full p-5 flex flex-col gap-5";
 
   return (
-    <Tabs defaultValue="Skills" className="max-w-6xl min-h-fit ">
+    <Tabs defaultValue="Skills" className="max-w-6xl min-h-fit">
       <TabsList className="rounded-none h-10 bg-transparent text-black">
         <TabsTrigger value="Skills" className={`${tabBtnStyle}`}>
           Skills

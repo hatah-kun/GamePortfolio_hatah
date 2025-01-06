@@ -17,6 +17,8 @@ const PrototypeDefender_trailer =
   "https://res.cloudinary.com/dwxnjoocx/video/upload/v1735907076/GAME_DEVELOPMENT_JOHN_ABIEL_NICOLAS_GAME_DEMO_VIDEO_FILE_oc64oa.mp4";
 const KeysAndCreeps_trailer =
   "https://res.cloudinary.com/dwxnjoocx/video/upload/v1736085328/KeysAndCreepsTrailer_1_momcqq.mp4";
+const Guardian_trailer =
+  "https://res.cloudinary.com/dwxnjoocx/video/upload/v1736166484/Guardian_trailer_ex59hg.mp4";
 
 // screenshots
 const PrototypeDefender_ss1 =
@@ -43,6 +45,7 @@ const ImageAssets = {
   },
   Guardian: {
     poster: Guardian_poster,
+    trailer: Guardian_trailer,
   },
   TwoBalls: {
     poster: TwoBalls_poster,

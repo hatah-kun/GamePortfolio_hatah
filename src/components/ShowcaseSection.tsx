@@ -37,8 +37,8 @@ const ShowcaseSection = () => {
               class="text-5xl text-black font-Gemsbuck_regular"
             />
             <p className="text-black">
-              The products of my passion and dedication to learn the craft of
-              game development.
+              These are some of the projects that I have crafted during my
+              journey to learn Unity.
             </p>
           </div>
           <div className="flex gap-6">
@@ -379,7 +379,7 @@ const games = [
       "A 2D top-down shooter where you will fight off waves of dark creatures while protecting your fidgety baby.",
     duration: "1 week",
     poster: ImageAssets.Guardian.poster,
-    background: ImageAssets.Guardian.poster,
+    background: ImageAssets.Guardian.trailer,
     screenshots: ["", "", ""],
     role: "Full-Stack",
     platform: "PC",
