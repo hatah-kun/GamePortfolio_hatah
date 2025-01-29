@@ -1,11 +1,11 @@
+import React, { useState, useEffect } from "react";
 import UnderLineLabel from "./ui/UnderLineLabel";
 import { VscUnmute, VscMute } from "react-icons/vsc";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { useState } from "react";
 import ImageAssets from "./AssetContainer";
 
 const ShowcaseSection = () => {
-  //modal variables
+  // modal variables
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [screenShotLink, setScreenShotLink] = useState("");
   const handleOpenModal = (imgSrc: string) => {
@@ -16,6 +16,11 @@ const ShowcaseSection = () => {
 
   const [isInfoShow, setIsInfoShow] = useState(true);
   const [isVideoMute, setIsVideoMute] = useState(true);
+
+  // Call ShowGame with default value 0 when the component loads
+  useEffect(() => {
+    ShowGame({ code: 0 });
+  }, []);
 
   return (
     <div
@@ -53,7 +58,7 @@ const ShowcaseSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 flex-grow w-full">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 flex-grow w-full h-[250px]">
           <div className=" col-span-4 bg-white/10 w-full relative flex flex-col items-center justify-center  group ">
             <div className="absolute top-4 right-4 bg-black/30 text-white z-40 flex">
               <button
@@ -162,7 +167,7 @@ const ShowcaseSection = () => {
             </div>
           </div>
 
-          <div className="col-span-2 flex flex-col h-full ">
+          <div className="col-span-2 flex flex-col h-full overflow-y-scroll">
             <h1 className="text-5xl font-Gemsbuck_regular bg-white text-black p-6 v-clip-v1">
               Made with UNITY
             </h1>
@@ -390,13 +395,30 @@ const games = [
     genre: "2d Top down horror",
     description:
       "2d Top down horror game. Using only a flashlight, find the way out of this creepy room.",
-    duration: "1 day (Game Jam Event)",
+    duration: "8 Hours (Game Jam Event)",
     poster: ImageAssets.KeysCreeps.poster,
     background: ImageAssets.KeysCreeps.trailer,
     screenshots: ["", "", ""],
     role: "Developer, Level Designer",
     platform: "PC",
     projectType: "Group",
+  },
+  {
+    title: "Shinobi",
+    genre: "2d Sidescroller RPG",
+    description:
+      "Play the role of a young shinobi who must save his village from the evil forces that threaten to destroy it.",
+    duration: "1 week",
+    poster: ImageAssets.Shinobi.poster,
+    background: ImageAssets.Shinobi.trailer,
+    screenshots: [
+      ImageAssets.Shinobi.screenShot1,
+      ImageAssets.Shinobi.screenShot2,
+      ImageAssets.Shinobi.screenShot3,
+    ],
+    role: "Developer, Level Designer",
+    platform: "PC",
+    projectType: "Solo",
   },
 ];
 

@@ -1,4 +1,4 @@
-import { Boxes } from "./ui/background-boxes";
+// import { Boxes } from "./ui/background-boxes";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { TbBrandGmail, TbBrandFacebook, TbPhone } from "react-icons/tb";
@@ -45,11 +45,11 @@ const MessageForm = () => {
   return (
     <div
       id="contact_sec"
-      className="h-screen w-full flex justify-center items-center"
+      className="h-screen w-full flex justify-center items-center background-coverImage"
     >
-      <div className="h-full relative w-full overflow-hidden bg-customColor-dark flex flex-col items-center justify-center rounded-lg">
-        <div className="absolute inset-0 w-full h-full bg-customColor-dark z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-        <Boxes />
+      <div className="h-full relative w-full overflow-hidden  flex flex-col items-center justify-center rounded-lg">
+        {/* <div className="absolute inset-0 w-full h-full bg-customColor-dark z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" /> */}
+        {/* <Boxes /> */}
         <Toaster
           toastOptions={{
             className:
@@ -72,7 +72,7 @@ const MessageForm = () => {
               />
               <br />
               <h1 className="text-white text-3xl md:text-5xl text-right font-StylishBold border-r-2 px-2">
-                Together let's build something
+                Let's build something fun
               </h1>
             </div>
             <div className="flex gap-1 text-3xl">
@@ -98,7 +98,7 @@ const MessageForm = () => {
           </div>
           <form
             onSubmit={SendEmail}
-            className="w-full bg-white/5 p-10 backdrop-blur-sm grid grid-flow-row gap-4
+            className="w-full bg-customColor-dark p-10 backdrop-blur-sm grid grid-flow-row gap-4
         md:grid-cols-6 md:col-span-4"
           >
             <div className="flex flex-col col-span-6 md:col-span-3">

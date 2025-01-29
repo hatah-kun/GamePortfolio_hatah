@@ -14,7 +14,7 @@ const InfoSection = () => {
   return (
     <div
       id="skills_sec"
-      className={`min-h-screen w-full flex justify-center items-center relative `}
+      className={`min-h-screen w-full flex justify-center items-center relative bg-black/10`}
     >
       <div
         className={`h-fit w-fit flex flex-col md:flex-row justify-end  relative `}
@@ -53,7 +53,7 @@ const InfoSection = () => {
           </button>
         </div>
 
-        <div className="min-h-full md:w-4/12 flex items-end justify-center bg-customColor-primary">
+        <div className="min-h-full md:w-4/12 flex items-end justify-center bg-customColor-primary overflow-hidden">
           <img
             src={ImageAssets.Other.profile}
             alt="profile picture"
@@ -82,9 +82,9 @@ const TabContainer = () => {
         <TabsTrigger value="Stacks" className={`${tabBtnStyle}`}>
           Stacks
         </TabsTrigger>
-        <TabsTrigger value="Achievements" className={`${tabBtnStyle}`}>
+        {/* <TabsTrigger value="Achievements" className={`${tabBtnStyle}`}>
           Achievements
-        </TabsTrigger>
+        </TabsTrigger> */}
         <TabsTrigger value="Experience" className={`${tabBtnStyle}`}>
           Experience
         </TabsTrigger>
@@ -203,7 +203,7 @@ const TabContainer = () => {
           </div>
         </div>
       </TabsContent>
-      <TabsContent value="Achievements">
+      {/* <TabsContent value="Achievements">
         <div className={`${tabContainerStyle}`}>
           <TypingAnimation startOnView={true} className="font-Gemsbuck_regular">
             Achievements
@@ -225,7 +225,7 @@ const TabContainer = () => {
             />
           </div>
         </div>
-      </TabsContent>
+      </TabsContent> */}
       <TabsContent value="Experience">
         <div className={`${tabContainerStyle}`}>
           <TypingAnimation startOnView={true} className="font-Gemsbuck_regular">

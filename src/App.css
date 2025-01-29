@@ -78,7 +78,7 @@ body {
 
   .form-text-input {
     clip-path: polygon(calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%, 0 0);
-    @apply bg-black/30 text-white text-lg border-l-2 border-customColor-primary px-5 py-3;
+    @apply bg-black/50 text-white text-lg border-l-2 border-customColor-primary px-5 py-3;
   }
 
   .v-clip {
@@ -110,6 +110,14 @@ body {
 
   .writingMode-v {
     writing-mode: vertical-lr;
+  }
+
+  .background-coverImage {
+    background-image: url("./assets/DSC05606_black.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 

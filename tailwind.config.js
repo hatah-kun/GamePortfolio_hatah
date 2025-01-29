@@ -154,6 +154,9 @@ export default {
   	}
   },
   plugins: [addVariablesForColors, require("tailwindcss-animate")],
+  corePlugins: {
+    apply: true,
+  },
 }
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
