@@ -266,7 +266,7 @@ const ImageModal = ({
   if (!isOpen) return null;
   return (
     <div
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center z-50"
       onClick={onClose}
     >
       <div
@@ -275,6 +275,10 @@ const ImageModal = ({
       >
         <img src={imgSrc} alt={altText} className="h-full " />
       </div>
+
+      <p className="mt-4 text-white/50">
+        click anywhere outside the image to close
+      </p>
     </div>
   );
 };
