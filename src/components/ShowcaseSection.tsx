@@ -389,7 +389,11 @@ const games = [
     duration: "1 week",
     poster: ImageAssets.Guardian.poster,
     background: ImageAssets.Guardian.trailer,
-    screenshots: ["", "", ""],
+    screenshots: [
+      ImageAssets.Guardian.screenShot1,
+      ImageAssets.Guardian.screenShot2,
+      ImageAssets.Guardian.screenShot3,
+    ],
     role: "Full-Stack",
     platform: "PC",
     projectType: "Solo",
@@ -419,6 +423,24 @@ const games = [
       ImageAssets.Shinobi.screenShot1,
       ImageAssets.Shinobi.screenShot2,
       ImageAssets.Shinobi.screenShot3,
+    ],
+    role: "Developer, Level Designer",
+    platform: "PC",
+    projectType: "Solo",
+  },
+
+  {
+    title: "Two Balls",
+    genre: "3d Rolling Game",
+    description:
+      "With the two balls ready, gain momentum and crash into the cube objects that try to push you off the platform.",
+    duration: "1 week",
+    poster: ImageAssets.TwoBalls.poster,
+    background: ImageAssets.TwoBalls.trailer,
+    screenshots: [
+      ImageAssets.TwoBalls.screenShot1,
+      ImageAssets.TwoBalls.screenShot2,
+      ImageAssets.TwoBalls.screenShot3,
     ],
     role: "Developer, Level Designer",
     platform: "PC",
