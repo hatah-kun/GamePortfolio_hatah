@@ -12,6 +12,7 @@ import Guardian_poster from "../assets/GamePoster/Guadian_Poster(portrait).jpg";
 import TwoBalls_poster from "../assets/GamePoster/TwoBalls_Poster(portrait).jpg";
 import KeysCreeps_poster from "../assets/GamePoster/kcGAMEPOSTR.png";
 import Shinobi_poster from "../assets/GamePoster/Shinobi_poster.png";
+import FruitIndia_poster from "../assets/GamePoster/FruitIndia_Poster.png";
 
 // trailers
 
@@ -27,6 +28,9 @@ const Shinobi_trailer =
 
 const TwoBalls_trailer =
   "https://res.cloudinary.com/dwxnjoocx/video/upload/v1738229015/TwoBalls_trailer_x6bovp.mp4";
+
+const FruitIndia_trailer =
+  "https://res.cloudinary.com/dwxnjoocx/video/upload/v1738251791/FruitIndia_Trailer_m75ab3.mp4";
 
 // screenshots
 const PrototypeDefender_ss1 =
@@ -56,6 +60,13 @@ const TwoBalls_ss2 =
   "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738228985/Twoballs_SS1_nnu5jb.png";
 const TwoBalls_ss3 =
   "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738228986/Twoballs_SS2_dikiex.png";
+
+const FruitIndia_ss1 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738251769/FruitIndia_SS3_rqqex7.png";
+const FruitIndia_ss2 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738251769/FruitIndia_SS2_mwqb4x.png";
+const FruitIndia_ss3 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738251769/FruitIndia_SS1_ma4ch4.png";
 
 const ImageAssets = {
   Other: {
@@ -98,6 +109,13 @@ const ImageAssets = {
     screenShot1: TwoBalls_ss1,
     screenShot2: TwoBalls_ss2,
     screenShot3: TwoBalls_ss3,
+  },
+  FruitIndia: {
+    trailer: FruitIndia_trailer,
+    poster: FruitIndia_poster,
+    screenShot1: FruitIndia_ss1,
+    screenShot2: FruitIndia_ss2,
+    screenShot3: FruitIndia_ss3,
   },
 };
 

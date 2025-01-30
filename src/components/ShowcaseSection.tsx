@@ -369,6 +369,23 @@ const games = [
     projectType: "Solo",
   },
   {
+    title: "Shinobi",
+    genre: "2d Sidescroller RPG",
+    description:
+      "Play the role of a young shinobi who must save his village from the evil forces that threaten to destroy it.",
+    duration: "1 week",
+    poster: ImageAssets.Shinobi.poster,
+    background: ImageAssets.Shinobi.trailer,
+    screenshots: [
+      ImageAssets.Shinobi.screenShot1,
+      ImageAssets.Shinobi.screenShot2,
+      ImageAssets.Shinobi.screenShot3,
+    ],
+    role: "Developer, Level Designer",
+    platform: "PC",
+    projectType: "Solo",
+  },
+  {
     title: "U-ran",
     genre: "2d Sidescroller/Platform",
     description:
@@ -412,24 +429,6 @@ const games = [
     projectType: "Group",
   },
   {
-    title: "Shinobi",
-    genre: "2d Sidescroller RPG",
-    description:
-      "Play the role of a young shinobi who must save his village from the evil forces that threaten to destroy it.",
-    duration: "1 week",
-    poster: ImageAssets.Shinobi.poster,
-    background: ImageAssets.Shinobi.trailer,
-    screenshots: [
-      ImageAssets.Shinobi.screenShot1,
-      ImageAssets.Shinobi.screenShot2,
-      ImageAssets.Shinobi.screenShot3,
-    ],
-    role: "Developer, Level Designer",
-    platform: "PC",
-    projectType: "Solo",
-  },
-
-  {
     title: "Two Balls",
     genre: "3d Rolling Game",
     description:
@@ -441,6 +440,24 @@ const games = [
       ImageAssets.TwoBalls.screenShot1,
       ImageAssets.TwoBalls.screenShot2,
       ImageAssets.TwoBalls.screenShot3,
+    ],
+    role: "Developer, Level Designer",
+    platform: "PC",
+    projectType: "Solo",
+  },
+
+  {
+    title: "Fruit India",
+    genre: "2d Casual Game",
+    description:
+      "Slash all the fruits and avoid the bombs. The more fruits you slash, the more it mekus mekus. Parody game from the popular mobile game, Fruit Ninja.",
+    duration: "1 week",
+    poster: ImageAssets.FruitIndia.poster,
+    background: ImageAssets.FruitIndia.trailer,
+    screenshots: [
+      ImageAssets.FruitIndia.screenShot1,
+      ImageAssets.FruitIndia.screenShot2,
+      ImageAssets.FruitIndia.screenShot3,
     ],
     role: "Developer, Level Designer",
     platform: "PC",
