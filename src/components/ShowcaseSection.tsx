@@ -460,6 +460,24 @@ const games = [
       ImageAssets.FruitIndia.screenShot3,
     ],
     role: "Developer, Level Designer",
+    platform: "PC, Android",
+    projectType: "Solo",
+  },
+
+  {
+    title: "Dino Theft",
+    genre: "2d Top down stealth",
+    description:
+      "A 2D top-down stealth game where you play as dino with a magical shows ables you to teleport. Use the ability to steal the treasure that is guarded by the guards.",
+    duration: "1 week",
+    poster: ImageAssets.DinoTheft.poster,
+    background: ImageAssets.DinoTheft.trailer,
+    screenshots: [
+      ImageAssets.DinoTheft.screenShot1,
+      ImageAssets.DinoTheft.screenShot2,
+      ImageAssets.DinoTheft.screenShot3,
+    ],
+    role: "Developer, Level Designer",
     platform: "PC",
     projectType: "Solo",
   },

@@ -13,6 +13,7 @@ import TwoBalls_poster from "../assets/GamePoster/TwoBalls_Poster(portrait).jpg"
 import KeysCreeps_poster from "../assets/GamePoster/kcGAMEPOSTR.png";
 import Shinobi_poster from "../assets/GamePoster/Shinobi_poster.png";
 import FruitIndia_poster from "../assets/GamePoster/FruitIndia_Poster.png";
+import DinoTheft_Poster from "../assets/GamePoster/DinoTheft_poster.png";
 
 // trailers
 
@@ -31,6 +32,9 @@ const TwoBalls_trailer =
 
 const FruitIndia_trailer =
   "https://res.cloudinary.com/dwxnjoocx/video/upload/v1738251791/FruitIndia_Trailer_m75ab3.mp4";
+
+const DinoTheft_trailer =
+  "https://res.cloudinary.com/dwxnjoocx/video/upload/v1738296923/DinoTheft_Trailer_lkanai.mp4";
 
 // screenshots
 const PrototypeDefender_ss1 =
@@ -67,6 +71,13 @@ const FruitIndia_ss2 =
   "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738251769/FruitIndia_SS2_mwqb4x.png";
 const FruitIndia_ss3 =
   "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738251769/FruitIndia_SS1_ma4ch4.png";
+
+const DinoTheft_ss1 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738296892/DinoTheft_SS1_kqwyeh.png";
+const DinoTheft_ss2 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738296892/DinoTheft_SS2_osvsta.png";
+const DinoTheft_ss3 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738296892/DinoTheft_SS3_lg0ux9.png";
 
 const ImageAssets = {
   Other: {
@@ -116,6 +127,14 @@ const ImageAssets = {
     screenShot1: FruitIndia_ss1,
     screenShot2: FruitIndia_ss2,
     screenShot3: FruitIndia_ss3,
+  },
+
+  DinoTheft: {
+    trailer: DinoTheft_trailer,
+    poster: DinoTheft_Poster,
+    screenShot1: DinoTheft_ss1,
+    screenShot2: DinoTheft_ss2,
+    screenShot3: DinoTheft_ss3,
   },
 };
 
