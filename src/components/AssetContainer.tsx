@@ -2,7 +2,7 @@
 
 import ProfilePicture from "../assets/NICOLAS_VectorArt.png";
 import CoverPicture from "../assets/DSC05606_black.jpg";
-import Resume from "../assets/NicolasJohnAbiel_GameDev - Resume.pdf";
+import Resume from "../assets/NicolasJohnAbiel_GameDevResume.pdf";
 
 // posters
 
@@ -35,6 +35,9 @@ const FruitIndia_trailer =
 
 const DinoTheft_trailer =
   "https://res.cloudinary.com/dwxnjoocx/video/upload/v1738296923/DinoTheft_Trailer_lkanai.mp4";
+
+const URan_trailer =
+  "https://res.cloudinary.com/dwxnjoocx/video/upload/v1738415330/Uran_trailer_b9jkul.mp4";
 
 // screenshots
 const PrototypeDefender_ss1 =
@@ -79,6 +82,13 @@ const DinoTheft_ss2 =
 const DinoTheft_ss3 =
   "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738296892/DinoTheft_SS3_lg0ux9.png";
 
+const URan_ss1 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738415297/Uran_SS1_lxzpod.png";
+const URan_ss2 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738415297/Uran_SS2_fuspbk.png";
+const URan_ss3 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738415297/Uran_SS3_wd2tss.png";
+
 const ImageAssets = {
   Other: {
     profile: ProfilePicture,
@@ -94,6 +104,10 @@ const ImageAssets = {
   },
   URan: {
     poster: URan_poster,
+    trailer: URan_trailer,
+    screenShot1: URan_ss1,
+    screenShot2: URan_ss2,
+    screenShot3: URan_ss3,
   },
   Guardian: {
     poster: Guardian_poster,

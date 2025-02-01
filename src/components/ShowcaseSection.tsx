@@ -25,7 +25,7 @@ const ShowcaseSection = () => {
   return (
     <div
       id="showcase_sec"
-      className={`h-screen w-full flex flex-row justify-center items-center`}
+      className={`min-h-screen py-20 w-full flex flex-row justify-center items-center`}
     >
       <ImageModal
         imgSrc={screenShotLink}
@@ -34,8 +34,8 @@ const ShowcaseSection = () => {
         onClose={handleCloseModal}
       />
 
-      <div className="h-3/4 w-4/5 flex flex-col items-center justify-center gap-4">
-        <div className=" w-full bg-customColor-primary v-clip-v1 p-6 flex flex-col md:flex-row justify-between items-center">
+      <div className="md:w-4/5 flex flex-col items-center justify-center gap-4">
+        <div className=" w-full bg-customColor-primary v-clip-v1 p-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
             <UnderLineLabel
               content="ARCHIVE GAMES"
@@ -46,7 +46,7 @@ const ShowcaseSection = () => {
               journey to learn Unity.
             </p>
           </div>
-          <div className="flex gap-6">
+          <div className="flex gap-6 self-end">
             <div className="flex flex-col justify-center items-center font-Gemsbuck_regular text-black">
               <p>PROJECTS</p>
               <h1 className="text-7xl">10</h1>
@@ -58,8 +58,8 @@ const ShowcaseSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-6 flex-grow w-full h-[250px]">
-          <div className=" col-span-4 bg-white/10 w-full relative flex flex-col items-center justify-center  group ">
+        <div className="md:grid flex flex-col md:grid-cols-6 gap-6 flex-grow w-full md:h-[600px] ">
+          <div className=" col-span-4 bg-white/10 w-full h-[500px] md:h-full relative flex flex-col items-center justify-center  group ">
             <div className="absolute top-4 right-4 bg-black/30 text-white z-40 flex">
               <button
                 id="muteBtn"
@@ -135,12 +135,12 @@ const ShowcaseSection = () => {
                 </div>
               </div>
 
-              <div className="flex flex-row justify-center items-center gap-4 self-start z-10">
+              <div className="flex flex-row w-full justify-center items-center md:justify-start gap-4 self-start z-10">
                 <img
                   src=""
                   alt="game screen shot"
                   id="gameSS1"
-                  className="w-[180px] h-[100px] hover:-translate-y-2 transition-all duration-300"
+                  className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
                   onClick={(event) =>
                     handleOpenModal((event.target as HTMLImageElement).src)
                   }
@@ -149,7 +149,7 @@ const ShowcaseSection = () => {
                   src=""
                   alt="game screen shot"
                   id="gameSS2"
-                  className="w-[180px] h-[100px] hover:-translate-y-2 transition-all duration-300"
+                  className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
                   onClick={(event) =>
                     handleOpenModal((event.target as HTMLImageElement).src)
                   }
@@ -158,7 +158,7 @@ const ShowcaseSection = () => {
                   src=""
                   alt="game screen shot"
                   id="gameSS3"
-                  className="w-[180px] h-[100px] hover:-translate-y-2 transition-all duration-300"
+                  className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
                   onClick={(event) =>
                     handleOpenModal((event.target as HTMLImageElement).src)
                   }
@@ -167,7 +167,7 @@ const ShowcaseSection = () => {
             </div>
           </div>
 
-          <div className="col-span-2 flex flex-col h-full overflow-y-scroll">
+          <div className="col-span-2 flex flex-col overflow-y-scroll m-0 h-[500px] md:h-full text-center w-full">
             <h1 className="text-5xl font-Gemsbuck_regular bg-white text-black p-6 v-clip-v1">
               Made with UNITY
             </h1>
@@ -270,10 +270,10 @@ const ImageModal = ({
       onClick={onClose}
     >
       <div
-        className="bg-white/10 p-4 h-2/3"
+        className="bg-white/10 p-4 w-full md:w-auto  md:h-2/3"
         onClick={(e) => e.stopPropagation()}
       >
-        <img src={imgSrc} alt={altText} className="h-full " />
+        <img src={imgSrc} alt={altText} className="h-full w-full" />
       </div>
 
       <p className="mt-4 text-white/50">
@@ -392,8 +392,12 @@ const games = [
       "2D side-scrolling adventure game where you will take on the journey of Raina to find his way back home.",
     duration: "1 month",
     poster: ImageAssets.URan.poster,
-    background: ImageAssets.URan.poster,
-    screenshots: ["", "", ""],
+    background: ImageAssets.URan.trailer,
+    screenshots: [
+      ImageAssets.URan.screenShot1,
+      ImageAssets.URan.screenShot2,
+      ImageAssets.URan.screenShot3,
+    ],
     role: "Developer, Level Designer, Asset Creator",
     platform: "PC",
     projectType: "Group",

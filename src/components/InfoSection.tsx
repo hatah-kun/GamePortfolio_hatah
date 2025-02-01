@@ -14,7 +14,7 @@ const InfoSection = () => {
   return (
     <div
       id="skills_sec"
-      className={`min-h-screen w-full flex justify-center items-center relative bg-black/10`}
+      className={`min-h-screen py-20 w-full flex justify-center items-center relative bg-black/10`}
     >
       <div
         className={`h-fit w-fit flex flex-col md:flex-row justify-end  relative `}

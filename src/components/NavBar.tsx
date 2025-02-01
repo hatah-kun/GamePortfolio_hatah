@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <div className="z-50 fixed w-full h-min flex items-center md:justify-between px-10 py-5">
       {/* gradient shadow */}
-      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/70 via-transparent to-transparent z-40"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-transparent z-40"></div>
       <a href="/" className="flex items-center z-50">
         <img
           src="https://res.cloudinary.com/dwxnjoocx/image/upload/v1735530211/RedCraft_icon_losi65.png"
@@ -52,8 +52,8 @@ const NavBar = () => {
         animate-rectBackwards`}
       >
         <NavBtn btnName="Home" target="#home_sec" />
-        <NavBtn btnName="About" target="#skills_sec" />
         <NavBtn btnName="Projects" target="#showcase_sec" />
+        <NavBtn btnName="About" target="#skills_sec" />
         <NavBtn btnName="Contact" target="#contact_sec" />
       </ul>
     </div>
