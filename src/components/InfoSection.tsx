@@ -33,7 +33,7 @@ const InfoSection = () => {
             <p className="bg-white text-black font-bold font-Gemsbuck_regular v-clip-v1 w-fit px-5 py-3">
               Programmer
             </p>
-            <h1 className="text-8xl font-StylishBold mt-6">
+            <h1 className="text-5xl md:text-8xl font-StylishBold mt-6">
               JOHN ABIEL <br /> NICOLAS
             </h1>
             <p>

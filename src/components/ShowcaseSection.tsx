@@ -59,7 +59,7 @@ const ShowcaseSection = () => {
         </div>
 
         <div className="md:grid flex flex-col md:grid-cols-6 gap-6 flex-grow w-full md:h-[600px] ">
-          <div className=" col-span-4 bg-white/10 w-full h-[500px] md:h-full relative flex flex-col items-center justify-center  group ">
+          <div className=" col-span-4 bg-white/10 w-full min-h-[400px] md:h-full relative flex flex-col items-center justify-center  group ">
             <div className="absolute top-4 right-4 bg-black/30 text-white z-40 flex">
               <button
                 id="muteBtn"
