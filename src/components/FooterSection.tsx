@@ -2,7 +2,7 @@ const FooterSection = () => {
   return (
     <footer className="w-full bg-white/10 text-white py-8 border-t-4 border-customColor-primary relative">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center ">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center ">
           <div
             className="bg-customColor-primary w-80 h-14 absolute top-0 left-0"
             style={{ clipPath: "polygon(0 0, 100% 0, 70% 100%, 0% 100%)" }}
@@ -28,7 +28,7 @@ const FooterSection = () => {
               </div>
             </div>
           </div>
-          <div className="flex space-x-4 font-Gemsbuck_regular w-full">
+          <div className="flex flex-col md:flex-row md: justify-end font-Gemsbuck_regular w-full">
             <a
               href="#home_sec"
               className="hover:underline hover:bg-customColor-primary p-4 v-clip-v1 "

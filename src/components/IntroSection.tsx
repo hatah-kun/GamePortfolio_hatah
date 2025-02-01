@@ -11,7 +11,7 @@ const IntroSection = () => {
     >
       <RetroGrid opacity={0.12} />
 
-      <div className="h-full w-full flex flex-col items-center justify-center gap-10 relative">
+      <div className="h-full w-full flex flex-col items-center justify-around md:justify-center gap-4 relative">
         <div className="flex flex-col m-9  md:flex-row md:justify-between w-full  ">
           <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
             JOHN ABIEL
