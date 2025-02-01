@@ -17,9 +17,9 @@ const InfoSection = () => {
       className={`min-h-screen py-20 w-full flex justify-center items-center relative bg-black/10`}
     >
       <div
-        className={`h-fit w-fit flex flex-col md:flex-row justify-end  relative `}
+        className={`h-fit w-fit max-w-full flex flex-col md:flex-row justify-end  relative `}
       >
-        <div className="md:w-fit min-h-full flex flex-col justify-end gap-4  p-6 bg-customColor-primary relative">
+        <div className="md:w-fit max-w-full min-h-full flex flex-col justify-end gap-4  p-6 bg-customColor-primary relative">
           <div
             className="bg-customColor-primary w-14 h-80 absolute top-0 -left-[40px] hidden md:block"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 80%)" }}
