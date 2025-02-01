@@ -1,6 +1,6 @@
 const FooterSection = () => {
   return (
-    <footer className="bg-white/10 text-white py-8 border-t-4 border-customColor-primary relative">
+    <footer className="w-full bg-white/10 text-white py-8 border-t-4 border-customColor-primary relative">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center ">
           <div
@@ -28,7 +28,7 @@ const FooterSection = () => {
               </div>
             </div>
           </div>
-          <div className="flex space-x-4 font-Gemsbuck_regular">
+          <div className="flex space-x-4 font-Gemsbuck_regular w-full">
             <a
               href="#home_sec"
               className="hover:underline hover:bg-customColor-primary p-4 v-clip-v1 "

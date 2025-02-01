@@ -11,7 +11,7 @@ const IntroSection = () => {
     >
       <RetroGrid opacity={0.12} />
 
-      <div className="h-full w-full flex flex-col items-center justify-center gap-4 relative">
+      <div className="h-full w-full flex flex-col items-center justify-center gap-10 relative">
         <div className="flex flex-col m-9  md:flex-row md:justify-between w-full  ">
           <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
             JOHN ABIEL
@@ -31,7 +31,7 @@ const IntroSection = () => {
           className="h-5/6 absolute bottom-0 filter grayscale opacity-5"
         /> */}
 
-        <div className="w-full flex flex-col md:flex-row md:justify-between items-center justify-between absolute bottom-0 gap-5">
+        <div className="w-full flex flex-col md:flex-row md:justify-between items-center justify-between absolute bottom-0 gap-10">
           <InfoCard
             title="Info"
             content=" An evolving collection of memories and experiences from my journey as a
