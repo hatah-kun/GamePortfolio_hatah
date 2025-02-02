@@ -14,6 +14,7 @@ import KeysCreeps_poster from "../assets/GamePoster/kcGAMEPOSTR.png";
 import Shinobi_poster from "../assets/GamePoster/Shinobi_poster.png";
 import FruitIndia_poster from "../assets/GamePoster/FruitIndia_Poster.png";
 import DinoTheft_Poster from "../assets/GamePoster/DinoTheft_poster.png";
+import Codyssey_Poster from "../assets/GamePoster/Codyssey_poster.png";
 
 // trailers
 
@@ -38,6 +39,9 @@ const DinoTheft_trailer =
 
 const URan_trailer =
   "https://res.cloudinary.com/dwxnjoocx/video/upload/v1738415330/Uran_trailer_b9jkul.mp4";
+
+const Codyssey_trailer =
+  "https://res.cloudinary.com/dwxnjoocx/video/upload/v1738485789/Codessey_trailer_ke3h1v.mp4";
 
 // screenshots
 const PrototypeDefender_ss1 =
@@ -88,6 +92,13 @@ const URan_ss2 =
   "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738415297/Uran_SS2_fuspbk.png";
 const URan_ss3 =
   "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738415297/Uran_SS3_wd2tss.png";
+
+const Codyssey_ss1 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738485763/Codyssey_SS1_bvhm2b.png";
+const Codyssey_ss2 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738485764/Codyssey_SS3_c8h7ax.png";
+const Codyssey_ss3 =
+  "https://res.cloudinary.com/dwxnjoocx/image/upload/v1738485763/Codyssey_SS2_aj7k3f.png";
 
 const ImageAssets = {
   Other: {
@@ -149,6 +160,14 @@ const ImageAssets = {
     screenShot1: DinoTheft_ss1,
     screenShot2: DinoTheft_ss2,
     screenShot3: DinoTheft_ss3,
+  },
+
+  Codyssey: {
+    trailer: Codyssey_trailer,
+    poster: Codyssey_Poster,
+    screenShot1: Codyssey_ss1,
+    screenShot2: Codyssey_ss2,
+    screenShot3: Codyssey_ss3,
   },
 };
 
