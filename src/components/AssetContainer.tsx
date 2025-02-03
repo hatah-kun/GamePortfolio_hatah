@@ -2,7 +2,7 @@
 
 import ProfilePicture from "../assets/NICOLAS_VectorArt.png";
 import CoverPicture from "../assets/DSC05606_black.jpg";
-import Resume from "../assets/NicolasJohnAbiel_GameDevResume.pdf";
+import Resume from "../assets/NicolasJohnAbiel_GameDev-Resume.pdf";
 
 // posters
 
