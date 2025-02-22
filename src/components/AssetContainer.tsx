@@ -20,7 +20,7 @@ import Codyssey_Poster from "../assets/GamePoster/Codyssey_poster.png";
 
 import PrototypeDefender_trailer from "../assets/GameTrailers/GAME DEVELOPMENT_JOHN ABIEL NICOLAS_GAME DEMO VIDEO FILE.mp4";
 import KeysAndCreeps_trailer from "../assets/GameTrailers/KeysAndCreepsTrailer.mp4";
-import Guardian_trailer from "../assets/GameTrailers/GUARDIAN.mp4";
+import Guardian_trailer from "../assets/GameTrailers/Guardian_trailer.mp4";
 import Shinobi_trailer from "../assets/GameTrailers/Shinobitrailer.mp4";
 import TwoBalls_trailer from "../assets/GameTrailers/TwoBalls_trailer.mp4";
 import FruitIndia_trailer from "../assets/GameTrailers/FruitIndia_Trailer.mp4";
