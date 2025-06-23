@@ -3,6 +3,7 @@
 import ProfilePicture from "../assets/NICOLAS_VectorArt.png";
 import CoverPicture from "../assets/DSC05606_black.jpg";
 import Resume from "../assets/NicolasJohnAbiel_GameDev-Resume.pdf";
+import Logo from "../assets/RedCraft_icon.png";
 
 // posters
 
@@ -148,6 +149,7 @@ const ImageAssets = {
     profile: ProfilePicture,
     resume: Resume,
     cover: CoverPicture,
+    logo: Logo,
   },
   PrototypeDefender: {
     poster: PrototypeDefender_poster,

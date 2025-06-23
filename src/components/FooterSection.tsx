@@ -1,3 +1,5 @@
+import ImageAssets from "./AssetContainer";
+
 const FooterSection = () => {
   return (
     <footer className="w-full bg-white/10 text-white py-8 border-t-4 border-customColor-primary relative">
@@ -10,7 +12,7 @@ const FooterSection = () => {
           <div className="mb-4 md:mb-0">
             <div className="flex items-center space-x-4">
               <img
-                src="https://res.cloudinary.com/dwxnjoocx/image/upload/v1735530211/RedCraft_icon_losi65.png"
+                src={ImageAssets.Other.logo}
                 alt="RedCraft Icon"
                 className="h-24 w-auto"
               />
