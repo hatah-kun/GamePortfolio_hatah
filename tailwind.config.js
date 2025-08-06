@@ -21,7 +21,7 @@ export default {
   		colors: {
   			customColor: {
   				primary: '#991b1b',
-  				light: '#f3f4f6',
+  				light: '#c1c1c1',
   				DEFAULT: '#374151',
   				dark: '#18181b'
   			},

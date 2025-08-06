@@ -11,36 +11,26 @@ const IntroSection = () => {
     >
       <RetroGrid opacity={0.12} />
 
-      <div className="h-full w-full flex flex-col items-center justify-around md:justify-center gap-4 relative">
-        <div className="flex flex-col m-9  md:flex-row md:justify-between w-full  ">
-          <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
-            JOHN ABIEL
-          </HyperText>
-          <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
-            Nicolas
-          </HyperText>
+        <div className="h-full w-full flex flex-col-reverse items-center justify-center gap-16 md:gap-40 relative">
+            <div className="flex items-center justify-center w-full">
+                <InfoCard title="Status" content="Ready to comply" />
+                {/* <InfoCard ... /> */}
+            </div>
 
-          <HyperText as={"h1"} className="text-6xl font-Gemsbuck_regular">
-            PORTFOLIO
-          </HyperText>
+            <div className="w-full flex flex-col md:flex-row justify-start md:justify-evenly items-start md:items-center m-4 md:m-9 gap-4 md:gap-0">
+                <HyperText as={"h1"} className="text-5xl sm:text-4xl md:text-6xl font-Gemsbuck_regular text-left ">
+                    JOHN ABIEL
+                </HyperText>
+                <HyperText as={"h1"} className="text-5xl sm:text-4xl md:text-6xl font-Gemsbuck_regular text-left ">
+                    Nicolas
+                </HyperText>
+                <HyperText as={"h1"} className="text-5xl sm:text-4xl md:text-6xl font-Gemsbuck_regular text-left ">
+                    PORTFOLIO
+                </HyperText>
+            </div>
+
         </div>
 
-        {/* <img
-          src="src\assets\NICOLAS_VectorArt.png"
-          alt="dp"
-          className="h-5/6 absolute bottom-0 filter grayscale opacity-5"
-        /> */}
-
-        <div className="w-full flex flex-col md:flex-row md:justify-between items-center justify-between absolute bottom-0 gap-10">
-          <InfoCard
-            title="Info"
-            content=" An evolving collection of memories and experiences from my journey as a
-        game developer."
-          />
-
-          <InfoCard title="Status" content="Ready to comply..." />
-        </div>
-      </div>
     </div>
   );
 };
@@ -58,7 +48,7 @@ const InfoCard = ({ title, content }: { title: string; content: string }) => {
       </HyperText>
       <TypingAnimation
         startOnView={true}
-        className="text-lg font-Gemsbuck_thin"
+        className="text-lg font-Gemsbuck_thin text-center"
       >
         {content}
       </TypingAnimation>

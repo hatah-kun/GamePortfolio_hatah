@@ -18,166 +18,142 @@ const ShowcaseSection = () => {
   const [isVideoMute, setIsVideoMute] = useState(true);
 
   // Call ShowGame with default value 0 when the component loads
-  useEffect(() => {
-    ShowGame({ code: 0 });
-  }, []);
+    useEffect(() => {
+        ShowGame({ code: 0 });
+    }, []);
 
-  return (
-    <div
-      id="showcase_sec"
-      className={`min-h-screen py-20 w-full flex flex-row justify-center items-center`}
-    >
-      <ImageModal
-        imgSrc={screenShotLink}
-        altText="Descriptive text for your image"
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
-
-      <div className="md:w-4/5 flex flex-col items-center justify-center gap-4">
-        <div className=" w-full bg-customColor-primary v-clip-v1 p-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div>
-            <UnderLineLabel
-              content="ARCHIVE GAMES"
-              class="text-5xl text-black font-Gemsbuck_regular"
+    return (
+        <div
+            id="showcase_sec"
+            className="min-h-screen py-10 px-2 w-full flex flex-col md:flex-row justify-center items-center"
+        >
+            <ImageModal
+                imgSrc={screenShotLink}
+                altText="Descriptive text for your image"
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
             />
-            <p className="text-black">
-              These are some of the projects that I have crafted during my
-              journey to learn Unity.
-            </p>
-          </div>
-          <div className="flex gap-6 self-end">
-            <div className="flex flex-col justify-center items-center font-Gemsbuck_regular text-black">
-              <p>PROJECTS</p>
-              <h1 className="text-7xl">10</h1>
-            </div>
-            <div className="flex flex-col justify-center items-center font-Gemsbuck_regular text-black">
-              <p>CLIENTS</p>
-              <h1 className="text-7xl">2</h1>
-            </div>
-          </div>
-        </div>
 
-        <div className="md:grid flex flex-col md:grid-cols-6 gap-6 flex-grow w-full md:h-[600px] ">
-          <div className=" col-span-4 bg-white/10 w-full min-h-[400px] md:h-full relative flex flex-col items-center justify-center  group ">
-            <div className="absolute top-4 right-4 bg-black/30 text-white z-40 flex">
-              <button
-                id="muteBtn"
-                onClick={() => {
-                  setIsVideoMute(ControlVideoAudio());
-                }}
-                className="text-xl p-2"
-              >
-                {isVideoMute ? <VscMute /> : <VscUnmute />}
-              </button>
-
-              <button
-                id="muteBtn"
-                onClick={() => {
-                  setIsInfoShow(ShowGameInfo());
-                }}
-                className="text-xl p-2"
-              >
-                {isInfoShow ? <FaRegEye /> : <FaRegEyeSlash />}
-              </button>
-            </div>
-
-            <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center  z-0 bg-black border-b-4 border-customColor-primary overflow-hidden">
-              <img id="gameBG" alt="Game Background" className="w-full" />
-
-              <video
-                id="videoBg"
-                src=""
-                autoPlay={true}
-                loop={true}
-                muted={true}
-                className="w-full  "
-              ></video>
-            </div>
-
-            <div
-              id="gameInfoGroup"
-              className="z-10 bg-gradient-to-r from-black/85 via-transparent to-transparent p-10 absolute top-0 left-0 w-full h-full 
-            flex flex-col justify-between items-center transition-all duration-300"
-            >
-              <div className="self-start my-auto w-1/2 flex flex-col gap-4">
-                <h1 id="gameTitle" className="text-5xl">
-                  Game Title
-                </h1>
-
-                <p id="gameDescription"></p>
-
-                <div>
-                  <span className="flex flex-row items-center gap-4 text-sm">
-                    Platform:{" "}
-                    <p id="gamePlatform" className="text-lg">
-                      platform
-                    </p>
-                  </span>
-                  <span className="flex flex-row items-center gap-4 text-sm">
-                    Project Duration:{" "}
-                    <p id="gameDuration" className="text-lg">
-                      duaration
-                    </p>
-                  </span>
-                  <span className="flex flex-row items-center gap-4 text-sm">
-                    Project Type:{" "}
-                    <p id="gameProjectType" className="text-lg">
-                      solo
-                    </p>
-                  </span>
-                  <span className="flex flex-row items-center gap-4 text-sm">
-                    Role:{" "}
-                    <p id="gameRole" className="text-lg">
-                      role
-                    </p>
-                  </span>
+            <div className="w-full md:w-4/5 flex flex-col items-center justify-center gap-4">
+                <div className="w-full bg-customColor-primary v-clip-v1 p-4 md:p-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
+                    <div className="w-full md:w-2/3">
+                        <UnderLineLabel
+                            content="ARCHIVE GAMES"
+                            class="text-3xl md:text-5xl text-black font-Gemsbuck_regular"
+                        />
+                        <p className="text-black text-base md:text-lg">
+                            These are some of the projects that I have crafted during my journey to learn Unity.
+                        </p>
+                    </div>
+                    <div className="flex gap-4 md:gap-6 self-end">
+                        <div className="flex flex-col justify-center items-center font-Gemsbuck_regular text-black">
+                            <p>PROJECTS</p>
+                            <h1 className="text-4xl md:text-7xl">10</h1>
+                        </div>
+                        <div className="flex flex-col justify-center items-center font-Gemsbuck_regular text-black">
+                            <p>CLIENTS</p>
+                            <h1 className="text-4xl md:text-7xl">2</h1>
+                        </div>
+                    </div>
                 </div>
-              </div>
 
-              <div className="flex flex-row w-full justify-center items-center md:justify-start gap-4 self-start z-10">
-                <img
-                  src=""
-                  alt="game screen shot"
-                  id="gameSS1"
-                  className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
-                  onClick={(event) =>
-                    handleOpenModal((event.target as HTMLImageElement).src)
-                  }
-                />
-                <img
-                  src=""
-                  alt="game screen shot"
-                  id="gameSS2"
-                  className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
-                  onClick={(event) =>
-                    handleOpenModal((event.target as HTMLImageElement).src)
-                  }
-                />
-                <img
-                  src=""
-                  alt="game screen shot"
-                  id="gameSS3"
-                  className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
-                  onClick={(event) =>
-                    handleOpenModal((event.target as HTMLImageElement).src)
-                  }
-                />
-              </div>
+                <div className="md:grid flex flex-col md:grid-cols-6 gap-4 md:gap-6 flex-grow w-full md:h-[600px]">
+                    <div className="col-span-4 bg-white/10 w-full min-h-[300px] md:min-h-[400px] md:h-full relative flex flex-col items-center justify-center group">
+                        <div className="absolute top-2 right-2 md:top-4 md:right-4 bg-black/30 text-white z-40 flex">
+                            <button
+                                id="muteBtn"
+                                onClick={() => setIsVideoMute(ControlVideoAudio())}
+                                className="text-lg md:text-xl p-2"
+                            >
+                                {isVideoMute ? <VscMute /> : <VscUnmute />}
+                            </button>
+                            <button
+                                id="muteBtn"
+                                onClick={() => setIsInfoShow(ShowGameInfo())}
+                                className="text-lg md:text-xl p-2"
+                            >
+                                {isInfoShow ? <FaRegEye /> : <FaRegEyeSlash />}
+                            </button>
+                        </div>
+
+                        <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center z-0 bg-black border-b-4 border-customColor-primary overflow-hidden">
+                            <img id="gameBG" alt="Game Background" className="w-full" />
+                            <video
+                                id="videoBg"
+                                src=""
+                                autoPlay
+                                loop
+                                muted
+                                className="w-full"
+                            ></video>
+                        </div>
+
+                        <div
+                            id="gameInfoGroup"
+                            className="z-10 bg-gradient-to-r from-black/85 via-transparent to-transparent p-4 md:p-10 absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center transition-all duration-300"
+                        >
+                            <div className="self-start my-auto w-full md:w-1/2 flex flex-col gap-2 md:gap-4">
+                                <h1 id="gameTitle" className="text-2xl md:text-5xl">
+                                    Game Title
+                                </h1>
+                                <p id="gameDescription" className="text-sm md:text-base"></p>
+                                <div>
+                  <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
+                    Platform: <p id="gamePlatform" className="text-base md:text-lg">platform</p>
+                  </span>
+                                    <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
+                    Project Duration: <p id="gameDuration" className="text-base md:text-lg">duration</p>
+                  </span>
+                                    <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
+                    Project Type: <p id="gameProjectType" className="text-base md:text-lg">solo</p>
+                  </span>
+                                    <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
+                    Role: <p id="gameRole" className="text-base md:text-lg">role</p>
+                  </span>
+                                </div>
+                            </div>
+                            <div className="flex flex-row w-full justify-center items-center md:justify-start gap-2 md:gap-4 self-start z-10">
+                                <img
+                                    src=""
+                                    alt="game screen shot"
+                                    id="gameSS1"
+                                    className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
+                                    onClick={(event) =>
+                                        handleOpenModal((event.target as HTMLImageElement).src)
+                                    }
+                                />
+                                <img
+                                    src=""
+                                    alt="game screen shot"
+                                    id="gameSS2"
+                                    className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
+                                    onClick={(event) =>
+                                        handleOpenModal((event.target as HTMLImageElement).src)
+                                    }
+                                />
+                                <img
+                                    src=""
+                                    alt="game screen shot"
+                                    id="gameSS3"
+                                    className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
+                                    onClick={(event) =>
+                                        handleOpenModal((event.target as HTMLImageElement).src)
+                                    }
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-span-2 flex flex-col overflow-y-scroll m-0 h-[300px] md:h-full text-center w-full">
+                        <h1 className="text-2xl md:text-5xl font-Gemsbuck_regular bg-white text-black p-4 md:p-6 v-clip-v1">
+                            Made with UNITY
+                        </h1>
+                        <DisplayGameList />
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div className="col-span-2 flex flex-col overflow-y-scroll m-0 h-[500px] md:h-full text-center w-full">
-            <h1 className="text-5xl font-Gemsbuck_regular bg-white text-black p-6 v-clip-v1">
-              Made with UNITY
-            </h1>
-
-            <DisplayGameList />
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 function ControlVideoAudio() {
