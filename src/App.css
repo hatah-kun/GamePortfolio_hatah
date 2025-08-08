@@ -72,6 +72,14 @@ body {
     active:border-r-white md:bg-transparent md:text-white md:hover:border-white md:hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300 ease-in-out;
   }
 
+    .section-format{
+        @apply min-h-screen w-full  flex justify-center items-center p-5 py-20 md:p-12  border-orange-200;
+    }
+
+  .section-format > div:first-child {
+        @apply md:w-10/12;
+    }
+
   .form-label {
     @apply text-lg;
   }
@@ -95,7 +103,32 @@ body {
     );
   }
 
-  .button-Style {
+
+    /* ----BUTTONS---*/
+
+   .button-arrow {
+      @apply p-2 relative outline-none;
+    }
+
+    .button-arrow::before {
+        content: "";
+        transition: all 0.2s;
+        opacity: 0;
+        transform: translateX(-4px);
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        translate: 0 -50%;
+    }
+
+    .button-arrow:hover::before {
+        content: "➔";
+        opacity: 1;
+        transform: translateX(-40px);
+    }
+
+
+  .button-shape {
     clip-path: polygon(
       0 0,
       calc(100% - 10px) 0,

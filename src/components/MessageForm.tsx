@@ -1,7 +1,7 @@
 // import { Boxes } from "./ui/background-boxes";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import { TbBrandGmail, TbBrandFacebook, TbPhone } from "react-icons/tb";
+import { TbBrandGmail, TbBrandFacebook, TbPhone, TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 import { Toaster, toast } from "sonner";
 import UnderLineLabel from "./ui/UnderLineLabel";
 
@@ -45,7 +45,7 @@ const MessageForm = () => {
   return (
     <div
       id="contact_sec"
-      className="h-screen w-full flex justify-center items-center background-coverImage"
+      className="section-format background-coverImage"
     >
       <div className="h-full relative w-full overflow-hidden  flex flex-col items-center justify-center rounded-lg">
         {/* <div className="absolute inset-0 w-full h-full bg-customColor-dark z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" /> */}
@@ -53,12 +53,12 @@ const MessageForm = () => {
         <Toaster
           toastOptions={{
             className:
-              " border-2 border-customColor-primary text-white bg-customColor-dark",
+              " border-b-2 border-customColor-primary text-white bg-customColor-dark rounded-none v-clip-v1",
           }}
         />
 
         <div
-          className="z-20 grid grid-cols-1 border-white/5 border-2 w-5/6
+          className="z-20 grid grid-cols-1 border-white/5 border-2 md:w-5/6
                      md:grid-cols-6 lg:max-w-7xl"
         >
           <div className=" bg-customColor-primary p-10 md:col-span-2 v-clip flex flex-col justify-between border-r border-white/5">
@@ -94,6 +94,18 @@ const MessageForm = () => {
               >
                 <TbPhone />
               </button>
+              {/*  <button
+                    className="flex items-center p-2 hover:bg-black/20"
+                    onClick={() => copyToClipboard(3)}
+                >
+                    <TbBrandGithub />
+                </button>*/}
+                <button
+                    className="flex items-center p-2 hover:bg-black/20"
+                    onClick={() => copyToClipboard(4)}
+                >
+                    <TbBrandLinkedin />
+                </button>
             </div>
           </div>
           <form
@@ -183,7 +195,7 @@ const MessageForm = () => {
 
             <button
               type="submit"
-              className="bg-customColor-primary button-Style col-span-6 w-fit"
+              className="bg-customColor-primary button-shape col-span-6 w-fit"
             >
               Send Message
             </button>
@@ -212,6 +224,16 @@ const copyToClipboard = (infoType: number) => {
       text = "+639093712753";
       textNotif = "Mobile number copied to clipboard";
       break;
+
+      case 3:
+          text = "github.com/hatah-kun";
+          textNotif = "Github profile link copied to clipboard";
+          break;
+
+      case 4:
+          text = "www.linkedin.com/in/johnabielnicolas-gamedev";
+          textNotif = "LinkedIn profile link copied to clipboard";
+          break;
 
     default:
       text = "nicolasjohnabielp@gmail.com";

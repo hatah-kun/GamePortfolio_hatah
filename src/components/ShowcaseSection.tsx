@@ -25,24 +25,24 @@ const ShowcaseSection = () => {
     return (
         <div
             id="showcase_sec"
-            className="min-h-screen py-10 px-2 w-full flex flex-col md:flex-row justify-center items-center"
+            className='section-format md:flex-row relative'
         >
             <ImageModal
                 imgSrc={screenShotLink}
-                altText="Descriptive text for your image"
+                altText="A screenshot of the game"
                 isOpen={isModalOpen}
                 onClose={handleCloseModal}
             />
 
-            <div className="w-full md:w-4/5 flex flex-col items-center justify-center gap-4">
+            <div className="w-full flex flex-col items-center justify-center gap-4">
                 <div className="w-full bg-customColor-primary v-clip-v1 p-4 md:p-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
                     <div className="w-full md:w-2/3">
                         <UnderLineLabel
                             content="ARCHIVE GAMES"
                             class="text-3xl md:text-5xl text-black font-Gemsbuck_regular"
                         />
-                        <p className="text-black text-base md:text-lg">
-                            These are some of the projects that I have crafted during my journey to learn Unity.
+                        <p className="text-black text-base md:text-lg font-Gemsbuck_regular">
+                            Crafted worlds during my journey to be a game developer.
                         </p>
                     </div>
                     <div className="flex gap-4 md:gap-6 self-end">

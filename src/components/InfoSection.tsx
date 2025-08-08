@@ -8,14 +8,16 @@ import {
 import TypingAnimation from "./ui/typing-animation";
 import IconCloud from "./ui/icon-cloud";
 import { HiOutlineDownload } from "react-icons/hi";
+import UnderLineLabel from "@/components/ui/UnderLineLabel.tsx";
+import {TbBrandGithub} from "react-icons/tb";
 
 const InfoSection = () => {
     return (
         <div
             id="skills_sec"
-            className="min-h-screen py-10 sm:py-16 md:py-20 w-full flex justify-center items-center relative bg-black/10"
+            className= 'section-format bg-black/10'
         >
-            <div className="w-11/12 sm:w-10/12 md:w-9/12 grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-4 md:gap-8 px-2 sm:px-6">
+            <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-4 md:gap-8">
                 <div className="flex flex-col justify-end gap-4 p-4 sm:p-6 bg-customColor-primary relative rounded-lg">
                     {/* Decorative shapes */}
                     <div
@@ -27,50 +29,76 @@ const InfoSection = () => {
                         style={{ clipPath: "polygon(0 0, 80% 0, 100% 100%, 0 100%)" }}
                     ></div>
                     {/* Main content */}
-                    <div className="flex flex-col overflow-hidden md:p-8 border-t-4 border-black relative">
-                        <img
+                    <div className="flex flex-col overflow-hidden md:p-8 relative">
+                      <img
                             src={ImageAssets.Other.profile}
                             alt="profile picture"
-                            className="max-w-full h-auto object-contain"
+                            className="max-w-full h-auto object-contain rounded-full aspect-square"
                         />
                     </div>
                     <div className="border-b-4 border-black text-black p-2 sm:p-4">
                         <p className="bg-white text-black font-bold font-Gemsbuck_regular v-clip-v1 w-fit px-3 sm:px-5 py-2 sm:py-3 text-sm sm:text-base">
                             Programmer
                         </p>
-                        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-StylishBold mt-4 sm:mt-6 break-words">
-                            JOHN ABIEL <br /> NICOLAS
-                        </h1>
+                        <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-StylishBold mt-4 sm:mt-6 break-words flex flex-row md:flex-col gap-2">
+                            <h1>
+                                JOHN ABIEL
+                            </h1>
+                            <h1 >
+                                NICOLAS
+                            </h1>
+                        </div>
                     </div>
-                    <button
-                        className="bg-black w-fit button-Style font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black flex gap-2 px-4 py-2 text-sm sm:text-base"
-                        onClick={DownloadResume}
-                    >
-                        <HiOutlineDownload className="text-xl" />
-                        Download Resume
-                    </button>
+                    <div className={"flex flex-row justify-between items-center gap-2 self-end"}>
+                      {/*  <button
+                            className="flex items-center bg-black w-fit button-shape font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black flex gap-2 px-4 py-2 text-sm sm:text-base"
+                            onClick={DownloadResume}
+                        >
+                            <HiOutlineDownload className="text-3xl" />
+                            Download Resume
+                        </button>*/}
+                        <button
+                            className="flex items-center gap-1 bg-black w-fit button-shape font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black px-4 py-2 text-3xl"
+                            onClick={() => window.open("https://github.com/hatah-kun", "_blank", "noopener,noreferrer")}
+                        >
+                            <TbBrandGithub />
+                            <span className={"text-base"}>Github</span>
+                        </button>
+                    </div>
+
                 </div>
 
-                <div className="w-full h-fit flex flex-col gap-4 bg-white/10 p-4 relative">
+                <div className="w-full h-full flex flex-col gap-4 bg-white/10 p-10 relative">
                     <div
                         className="bg-white/10 w-8/12 h-10 sm:h-14 absolute -bottom-10 sm:-bottom-[42px] right-0 block"
                         style={{ clipPath: "polygon(0 0, 100% 0,100% 100%, 40px 100%)" }}
                     ></div>
 
-                    <div className="border-b-4 border-black/20 pb-4">
-                        <TypingAnimation startOnView={true} className="font-Gemsbuck_regular">
+                    <div className="border-black/20 pb-4">
+                        <UnderLineLabel
+                            content={"About Me"}
+                            class="font-Gemsbuck_regular text-5xl"
+                        />
+                     {/*   <TypingAnimation startOnView={true} className="font-Gemsbuck_regular">
                             About Me
-                        </TypingAnimation>
-                        <p className="text-customColor-light mt-2 text-sm sm:text-base">
-                            Game developer with practical experience gained through academic projects, internships, and personal development initiatives.
+                        </TypingAnimation>*/}
+                        <p className="text-customColor-light mt-2 sm:text-base">
+                            Passionate game developer with hands-on experience acquired through academic projects, internships, and personal ventures.
                             Proficient in implementing interactive game features and programming AI behaviors that enhance player engagement.
-                            Strong focus on debugging and performance optimization to ensure smooth, responsive gameplay.
+                            Dedicated to meticulous debugging and performance optimization to ensure smooth, flawless and responsive gameplay.
                             Committed to continuous learning and staying current with emerging development technologies.
                             Excels in collaborative team environments, contributing effectively to the creative development process from concept to implementation.
                         </p>
                     </div>
 
                     <TabContainer />
+                    <button
+                        className="flex items-center bg-black w-fit button-shape font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black flex gap-2 px-4 py-2 text-sm sm:text-base self-end"
+                        onClick={DownloadResume}
+                    >
+                        <HiOutlineDownload className="text-3xl" />
+                        Download Resume
+                    </button>
                 </div>
             </div>
         </div>
@@ -79,18 +107,18 @@ const InfoSection = () => {
 
     const TabContainer = () => {
       const tabBtnStyle =
-        "rounded-none text-base sm:text-lg font-Gemsbuck_regular h-full md:px-6 lg:px-10 hover:bg-white/40 border-x border-black/10 active:bg-black active:text-customColor-primary bg-white/20";
+        "rounded-none text-base sm:text-lg font-Gemsbuck_regular h-full md:px-6 lg:px-10 hover:bg-white/40 border-x border-white/30 bg-white/0 ";
       const tabContainerStyle =
-        "rounded-none mt-3 overflow-y-auto h-[500px] min-w-full p-3 sm:p-5 flex flex-col gap-5";
+        "rounded-none mt-3 overflow-y-auto h-[450px] md:h-[450px] min-w-full flex flex-col gap-5";
 
       return (
-        <Tabs defaultValue="Skills" className="w-full min-h-fit">
-          <TabsList className="rounded-none h-10 bg-transparent text-black">
+        <Tabs defaultValue="Skills" className="w-full min-h-fit bg-black/20 md:p-10 p-5 rounded-xl">
+          <TabsList className="rounded-none h-10 bg-transparent text-white/50">
             <TabsTrigger value="Skills" className={tabBtnStyle}>
               Skills
             </TabsTrigger>
             <TabsTrigger value="Stacks" className={tabBtnStyle}>
-              Stacks
+              Technologies
             </TabsTrigger>
             <TabsTrigger value="Experience" className={tabBtnStyle}>
               Experience
@@ -124,7 +152,7 @@ const InfoSection = () => {
                 <li>
                   <ContentCard
                     title="AI Implementation"
-                    content="Designing NPC behavior and pathfinding systems."
+                    content="Designing NPC and enemy behavior, as well as pathfinding systems."
                   />
                 </li>
                 <li>
@@ -240,9 +268,9 @@ const InfoSection = () => {
       content: string;
     }) => {
       return (
-        <div className="bg-white p-3 text-black v-clip-v1 rounded-md">
-          <h3 className="text-lg sm:text-xl font-bold">{title}</h3>
-          <p className="text-sm sm:text-base">{content}</p>
+        <div className="bg-white/60 border-t-4 p-3 text-black v-clip-v1">
+          <h3 className="text-xl sm:text-xl font-bold">{title}</h3>
+          <p className="text-lg sm:text-base">{content}</p>
         </div>
       );
     };
