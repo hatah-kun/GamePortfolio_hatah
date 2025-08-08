@@ -1,7 +1,7 @@
 // import { Boxes } from "./ui/background-boxes";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import { TbBrandGmail, TbBrandFacebook, TbPhone, TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
+import { TbBrandGmail, TbBrandFacebook, TbPhone, TbBrandLinkedin } from "react-icons/tb";
 import { Toaster, toast } from "sonner";
 import UnderLineLabel from "./ui/UnderLineLabel";
 

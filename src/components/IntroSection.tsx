@@ -1,6 +1,6 @@
 import HyperText from "./ui/hyper-text";
 import RetroGrid from "./ui/retro-grid";
-import TypingAnimation from "./ui/typing-animation";
+/*import TypingAnimation from "./ui/typing-animation";*/
 
 const IntroSection = () => {
   return (
@@ -38,7 +38,7 @@ const IntroSection = () => {
                 </div>
 
 
-               {/* <div className=" w-fit flex items-center justify-center">
+               {/* <div className="w-fit flex items-center justify-center">
                     <InfoCard title="Status" content="Ready to comply" />
                 </div>*/}
             </div>
@@ -46,7 +46,7 @@ const IntroSection = () => {
 
     </div>
   );
-};  
+};
 
 /*
 const InfoCard = ({ title, content }: { title: string; content: string }) => {
