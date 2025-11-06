@@ -73,7 +73,7 @@ body {
   }
 
     .section-format{
-        @apply min-h-screen w-full  flex justify-center items-center p-5 py-20 md:p-12  border-orange-200;
+        @apply min-h-screen w-full flex justify-center items-center p-5 py-20 md:p-12  border-orange-200;
     }
 
   .section-format > div:first-child {

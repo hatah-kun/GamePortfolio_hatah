@@ -27,13 +27,6 @@ const ShowcaseSection = () => {
             id="showcase_sec"
             className='section-format md:flex-row relative'
         >
-            <ImageModal
-                imgSrc={screenShotLink}
-                altText="A screenshot of the game"
-                isOpen={isModalOpen}
-                onClose={handleCloseModal}
-            />
-
             <div className="w-full flex flex-col items-center justify-center gap-4">
                 <div className="w-full bg-customColor-primary v-clip-v1 p-4 md:p-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
                     <div className="w-full md:w-2/3">
@@ -152,6 +145,13 @@ const ShowcaseSection = () => {
                     </div>
                 </div>
             </div>
+
+            <ImageModal
+                imgSrc={screenShotLink}
+                altText="A screenshot of the game"
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+            />
         </div>
     );
 };
@@ -242,7 +242,7 @@ const ImageModal = ({
   if (!isOpen) return null;
   return (
     <div
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center z-50"
+      className="fixed inset-0 w-screen h-screen bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center z-50"
       onClick={onClose}
     >
       <div
