@@ -22,11 +22,8 @@ const FooterSection = () => {
                   RedCraft
                 </h2>
                 <p className="text-base mt-2 max-w-md">
-                  This portfolio showcases projects created from scratch by John
-                  Abiel Nicolas. These games, developed in a short period, are
-                  made with passion and dedication. They may be simple, but they
-                  embody a wealth of knowledge and experience and will continue
-                  to grow.
+                    A portfolio by John Abiel Nicolas, showcasing projects from school, game jams, and personal development.
+                    Driven by passion and creativity.
                 </p>
               </div>
             </div>

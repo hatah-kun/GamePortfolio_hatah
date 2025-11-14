@@ -85,7 +85,7 @@ const ShowcaseSection = () => {
                             id="gameInfoGroup"
                             className="z-10 bg-gradient-to-r from-black/85 via-transparent to-transparent p-4 md:p-10 absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center transition-all duration-300"
                         >
-                            <div className="self-start my-auto w-full md:w-1/2 flex flex-col gap-2 md:gap-4">
+                            <div className="self-start my-auto w-1/2 md:overflow-y-scroll flex flex-col gap-2 md:gap-4">
                                 <h1 id="gameTitle" className="text-2xl md:text-5xl">
                                     Game Title
                                 </h1>
