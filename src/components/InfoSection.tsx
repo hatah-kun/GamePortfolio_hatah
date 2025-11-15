@@ -15,7 +15,7 @@ const InfoSection = () => {
     return (
         <div
             id="skills_sec"
-            className= 'section-format bg-black/10'
+            className= 'section-format bg-customColor-dark'
         >
             <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-4 md:gap-8">
                 <div className="flex flex-col justify-end gap-4 p-4 sm:p-6 bg-customColor-primary relative rounded-lg">
@@ -68,11 +68,11 @@ const InfoSection = () => {
 
                 </div>
 
-                <div className="w-full h-full flex flex-col gap-4 bg-white/10 p-10 relative">
-                    <div
+                <div className="w-full h-full flex flex-col gap-4  p-10 relative">
+                   {/* <div
                         className="bg-white/10 w-8/12 h-10 sm:h-14 absolute -bottom-10 sm:-bottom-[42px] right-0 block"
                         style={{ clipPath: "polygon(0 0, 100% 0,100% 100%, 40px 100%)" }}
-                    ></div>
+                    ></div>*/}
 
                     <div className="border-black/20 pb-4">
                         <UnderLineLabel
@@ -112,7 +112,7 @@ const InfoSection = () => {
         "rounded-none mt-3 overflow-y-auto h-[450px] md:h-[450px] min-w-full flex flex-col gap-5";
 
       return (
-        <Tabs defaultValue="Skills" className="w-full min-h-fit bg-black/20 md:p-10 p-5 rounded-xl">
+        <Tabs defaultValue="Skills" className="w-full min-h-fit rounded-xl">
           <TabsList className="rounded-none h-10 bg-transparent text-white/50">
             <TabsTrigger value="Skills" className={tabBtnStyle}>
               Skills
@@ -268,7 +268,7 @@ const InfoSection = () => {
       content: string;
     }) => {
       return (
-        <div className="bg-white/60 border-t-4 p-3 text-black v-clip-v1">
+        <div className="bg-white/60 p-3 text-black v-clip-v1">
           <h3 className="text-xl sm:text-xl font-bold">{title}</h3>
           <p className="text-lg sm:text-base">{content}</p>
         </div>

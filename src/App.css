@@ -47,6 +47,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -103,6 +104,9 @@ body {
     );
   }
 
+    .screenShot-img{
+        @apply w-full w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300 border-2 border-customColor-dark;
+    }
 
     /* ----BUTTONS---*/
 
