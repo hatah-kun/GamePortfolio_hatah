@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import UnderLineLabel from "./ui/UnderLineLabel";
+//import UnderLineLabel from "./ui/UnderLineLabel";
 import { VscUnmute, VscMute } from "react-icons/vsc";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import ImageAssets from "./AssetContainer";
+
+
 
 const ShowcaseSection = () => {
   // modal variables
@@ -25,10 +27,10 @@ const ShowcaseSection = () => {
     return (
         <div
             id="showcase_sec"
-            className='section-format md:flex-row relative'
+            className='section-format md:flex-row items-end md:items-center relative '
         >
             <div className="w-full flex flex-col items-center justify-center gap-4">
-                <div className="w-full bg-customColor-primary v-clip-v1 p-4 md:p-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
+                {/*<div className="w-full bg-customColor-primary v-clip-v1 p-4 md:p-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
                     <div className="w-full md:w-2/3">
                         <UnderLineLabel
                             content="ARCHIVE GAMES"
@@ -48,11 +50,12 @@ const ShowcaseSection = () => {
                             <h1 className="text-4xl md:text-7xl">2</h1>
                         </div>
                     </div>
-                </div>
+                </div>*/}
 
                 <div className="md:grid flex flex-col md:grid-cols-6 gap-4 md:gap-6 flex-grow w-full md:h-[600px]">
-                    <div className="col-span-4 bg-white/10 w-full min-h-[300px] md:min-h-[400px] md:h-full relative flex flex-col items-center justify-center group">
-                        <div className="absolute top-2 right-2 md:top-4 md:right-4 bg-black/30 text-white z-40 flex">
+                    <div className="col-span-4  w-full min-h-[300px] md:min-h-[400px] md:h-full relative flex flex-col items-center justify-center group">
+
+                        <div className="absolute top-2 right-2 md:top-4 md:right-4  text-white z-40 flex">
                             <button
                                 id="muteBtn"
                                 onClick={() => setIsVideoMute(ControlVideoAudio())}
@@ -69,21 +72,12 @@ const ShowcaseSection = () => {
                             </button>
                         </div>
 
-                        <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center z-0 bg-black border-b-4 border-customColor-primary overflow-hidden">
-                            <img id="gameBG" alt="Game Background" className="w-full" />
-                            <video
-                                id="videoBg"
-                                src=""
-                                autoPlay
-                                loop
-                                muted
-                                className="w-full"
-                            ></video>
-                        </div>
+                        {/* preview area*/}
+
 
                         <div
                             id="gameInfoGroup"
-                            className="z-10 bg-gradient-to-r from-black/85 via-transparent to-transparent p-4 md:p-10 absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center transition-all duration-300"
+                            className="z-10 bg-gradient-to-r p-4 md:p-10 absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center transition-all duration-300"
                         >
                             <div className="self-start my-auto w-1/2 md:overflow-y-scroll flex flex-col gap-2 md:gap-4">
                                 <h1 id="gameTitle" className="text-2xl md:text-5xl">
@@ -91,26 +85,27 @@ const ShowcaseSection = () => {
                                 </h1>
                                 <p id="gameDescription" className="text-sm md:text-base"></p>
                                 <div>
-                  <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
-                    Platform: <p id="gamePlatform" className="text-base md:text-lg">platform</p>
-                  </span>
-                                    <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
-                    Project Duration: <p id="gameDuration" className="text-base md:text-lg">duration</p>
-                  </span>
-                                    <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
-                    Project Type: <p id="gameProjectType" className="text-base md:text-lg">solo</p>
-                  </span>
-                                    <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
-                    Role: <p id="gameRole" className="text-base md:text-lg">role</p>
-                  </span>
+                                      <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
+                                        Platform: <p id="gamePlatform" className="text-base md:text-lg">platform</p>
+                                      </span>
+                                                        <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
+                                        Project Duration: <p id="gameDuration" className="text-base md:text-lg">duration</p>
+                                      </span>
+                                                        <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
+                                        Project Type: <p id="gameProjectType" className="text-base md:text-lg">solo</p>
+                                      </span>
+                                                        <span className="flex flex-row items-center gap-2 md:gap-4 text-xs md:text-sm">
+                                        Role: <p id="gameRole" className="text-base md:text-lg">role</p>
+                                      </span>
                                 </div>
                             </div>
+
                             <div className="flex flex-row w-full justify-center items-center md:justify-start gap-2 md:gap-4 self-start z-10">
                                 <img
                                     src=""
                                     alt="game screen shot"
                                     id="gameSS1"
-                                    className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
+                                    className="screenShot-img"
                                     onClick={(event) =>
                                         handleOpenModal((event.target as HTMLImageElement).src)
                                     }
@@ -119,7 +114,7 @@ const ShowcaseSection = () => {
                                     src=""
                                     alt="game screen shot"
                                     id="gameSS2"
-                                    className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
+                                    className="screenShot-img"
                                     onClick={(event) =>
                                         handleOpenModal((event.target as HTMLImageElement).src)
                                     }
@@ -128,7 +123,7 @@ const ShowcaseSection = () => {
                                     src=""
                                     alt="game screen shot"
                                     id="gameSS3"
-                                    className="w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300"
+                                    className="screenShot-img"
                                     onClick={(event) =>
                                         handleOpenModal((event.target as HTMLImageElement).src)
                                     }
@@ -137,13 +132,44 @@ const ShowcaseSection = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-2 flex flex-col overflow-y-scroll m-0 h-[300px] md:h-full text-center w-full">
-                        <h1 className="text-2xl md:text-5xl font-Gemsbuck_regular bg-white text-black p-4 md:p-6 v-clip-v1">
-                            Made with UNITY
+                    <div className="col-span-2 flex flex-col overflow-y-scroll mt-3 md:m-0 h-auto md:h-full text-center w-full">
+                        <h1 className="w-fit md:w-full text-lg md:text-2xl md:text-5xl font-Gemsbuck_regular bg-white text-black py-2 px-6 md:p-6 v-clip-v1">
+                            Games
                         </h1>
                         <DisplayGameList />
                     </div>
                 </div>
+            </div>
+
+           {/* gradient overlays*/}
+           {/* <div style={{
+                position: "absolute",
+                inset: 0,
+                height: "10rem",
+                zIndex: 60,
+                background: "linear-gradient(to bottom, #18181b 50%, transparent 100%)"
+            }}/>
+
+            <div style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                height: "10rem",
+                width: "100%",
+                zIndex: 60,
+                background: "linear-gradient(to top, #18181b 50%, transparent 100%)"
+            }} />*/}
+
+            <div className="w-full h-full absolute top-10 left-0 flex items-center justify-center -z-20  overflow-hidden">
+                <img id="gameBG" alt="Game Background" className="w-full" />
+                <video
+                    id="videoBg"
+                    src=""
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full h-full object-cover"
+                ></video>
             </div>
 
             <ImageModal
@@ -190,22 +216,24 @@ const GameListBtn = ({
 }) => {
   return (
     <button
-      className="flex flex-row justify-between h-36 w-full bg-transparent relative group p-1 "
+      className="flex flex-row justify-between h-48 md:h-36 w-36 md:w-full bg-transparent relative group p-1 "
       onClick={() => ShowGame({ code })}
     >
       <div className="absolute top-0 left-0 w-0 h-full group-hover:w-full group-active:w-full bg-customColor-primary -z-10 transition-all duration-300" />
-      <div className="w-1/3 h-full   overflow-hidden flex items-start ">
-        <img
-          src={cover}
-          alt={`${title} cover`}
-          className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300"
-        />
+
+      <div className="md:w-1/3 w-full h-full overflow-hidden flex md:items-start ">
+            <img
+              src={cover}
+              alt={`${title} cover`}
+              className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300"
+            />
       </div>
-      <div className="w-4/6 h-full flex flex-col items-start justify-center pl-3">
-        <h1 className="text-gray-300 text-xl group-hover:text-black group-active:text-black">
+
+      <div className="w-full md:w-4/6 h-full z-10 hidden md:flex flex-col items-start justify-center pl-3">
+          <h1 className="text-gray-300 text-xl group-hover:text-black group-active:text-black">
           {title}
-        </h1>
-        <p className="text-gray-400">{platform}</p>
+          </h1>
+          <p className="text-gray-400">{platform}</p>
       </div>
     </button>
   );
@@ -213,7 +241,7 @@ const GameListBtn = ({
 
 const DisplayGameList = () => {
   return (
-    <ul className=" flex-grow flex flex-col gap-4 p-4 border-t-2 border-customColor-primary bg-black/10 overflow-y-scroll mt-4">
+    <ul className=" flex-grow flex md:flex-col flex-row gap-4 p-4 border-t-2 border-customColor-primary bg-black/10 overflow-y-scroll mt-4">
       {games.map((game, index) => (
         <li key={index}>
           <GameListBtn
