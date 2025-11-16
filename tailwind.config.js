@@ -6,14 +6,11 @@ const colors = require('tailwindcss/colors')
 
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+      "./index.html",
+      "./src/**/*.{js,ts,jsx,tsx,mdx}",
+      "./app/**/*.{js,ts,jsx,tsx,mdx}",
+      "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+      "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: ["class", "class"],
   theme: {
@@ -67,7 +64,7 @@ export default {
   			}
   		},
   		fontFamily: {
-  			StylishBold: [
+            Gemsbuck_bold: [
   				'Gemsbuck_bold',
   				'sans-serif'
   			],
@@ -154,9 +151,6 @@ export default {
   	}
   },
   plugins: [addVariablesForColors, require("tailwindcss-animate")],
-  corePlugins: {
-    apply: true,
-  },
 }
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

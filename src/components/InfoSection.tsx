@@ -17,8 +17,12 @@ const InfoSection = () => {
             id="skills_sec"
             className= 'section-format bg-customColor-dark'
         >
-            <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-4 md:gap-8">
+
+            <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8">
+
+                {/*PROFILE RED CARD*/}
                 <div className="flex flex-col justify-end gap-4 p-4 sm:p-6 bg-customColor-primary relative rounded-lg">
+
                     {/* Decorative shapes */}
                     <div
                         className="bg-customColor-primary w-10 sm:w-14 h-40 sm:h-80 absolute top-0 -left-4 sm:-left-[40px] hidden md:block"
@@ -28,6 +32,7 @@ const InfoSection = () => {
                         className="bg-customColor-primary w-40 sm:w-80 h-10 sm:h-14 absolute -top-4 sm:-top-[40px] left-0 block md:hidden"
                         style={{ clipPath: "polygon(0 0, 80% 0, 100% 100%, 0 100%)" }}
                     ></div>
+
                     {/* Main content */}
                     <div className="flex flex-col overflow-hidden md:p-8 relative">
                       <img
@@ -40,7 +45,7 @@ const InfoSection = () => {
                         <p className="bg-white text-black font-bold font-Gemsbuck_regular v-clip-v1 w-fit px-3 sm:px-5 py-2 sm:py-3 text-sm sm:text-base">
                             Programmer
                         </p>
-                        <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-StylishBold mt-4 sm:mt-6 break-words flex flex-row md:flex-col gap-2">
+                        <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-Gemsbuck_bold mt-4 sm:mt-6 break-words flex flex-row md:flex-col gap-2">
                             <h1>
                                 JOHN ABIEL
                             </h1>
@@ -68,13 +73,14 @@ const InfoSection = () => {
 
                 </div>
 
-                <div className="w-full h-full flex flex-col gap-4  p-10 relative">
+                {/*INFO CONTENT*/}
+                <div className="w-full h-full flex flex-col gap-4 relative p-5 md:p-10">
                    {/* <div
                         className="bg-white/10 w-8/12 h-10 sm:h-14 absolute -bottom-10 sm:-bottom-[42px] right-0 block"
                         style={{ clipPath: "polygon(0 0, 100% 0,100% 100%, 40px 100%)" }}
                     ></div>*/}
 
-                    <div className="border-black/20 pb-4">
+                    <div className="border-black/20 mb-2">
                         <UnderLineLabel
                             content={"About Me"}
                             class="font-Gemsbuck_regular text-5xl"
@@ -93,7 +99,7 @@ const InfoSection = () => {
 
                     <TabContainer />
                     <button
-                        className="flex items-center bg-black w-fit button-shape font-Gemsbuck_regular mt-3 hover:bg-white hover:text-black flex gap-2 px-4 py-2 text-sm sm:text-base self-end"
+                        className="flex items-center bg-white w-fit button-shape font-Gemsbuck_regular mt-3 hover:bg-customColor-primary text-black flex gap-2 px-4 py-2 text-sm sm:text-base self-end"
                         onClick={DownloadResume}
                     >
                         <HiOutlineDownload className="text-3xl" />
@@ -107,7 +113,7 @@ const InfoSection = () => {
 
     const TabContainer = () => {
       const tabBtnStyle =
-        "rounded-none text-base sm:text-lg font-Gemsbuck_regular h-full md:px-6 lg:px-10 hover:bg-white/40 border-x border-white/30 bg-white/0 ";
+        "w-20 md:w-auto text-clip overflow-hidden rounded-none text-base sm:text-lg font-Gemsbuck_regular h-full md:px-6 lg:px-10 hover:bg-white/40 border-x border-white/30 bg-white/0 hover:w-auto";
       const tabContainerStyle =
         "rounded-none mt-3 overflow-y-auto h-[450px] md:h-[450px] min-w-full flex flex-col gap-5";
 

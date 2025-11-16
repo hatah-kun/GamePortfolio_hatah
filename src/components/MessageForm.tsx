@@ -61,7 +61,7 @@ const MessageForm = () => {
           className="z-20 grid grid-cols-1 border-white/5 border-2 md:w-5/6
                      md:grid-cols-6 lg:max-w-7xl"
         >
-          <div className=" bg-customColor-primary p-10 md:col-span-2 v-clip flex flex-col justify-between border-r border-white/5">
+          <div className=" bg-customColor-primary p-6 md:p-10 md:col-span-2 v-clip flex flex-col justify-between border-r border-white/5">
             <div>
               {/* <p className="font-Gemsbuck_regular text-xl underline underline-offset-4">
                 contact
@@ -71,7 +71,7 @@ const MessageForm = () => {
                 class="font-Gemsbuck_regular text-xl"
               />
               <br />
-              <h1 className="text-white text-3xl md:text-5xl text-right font-StylishBold border-r-2 px-2">
+              <h1 className="text-white text-3xl md:text-5xl text-right font-Gemsbuck_bold border-r-2 px-2">
                 Let's build something fun
               </h1>
             </div>
@@ -110,7 +110,7 @@ const MessageForm = () => {
           </div>
           <form
             onSubmit={SendEmail}
-            className="w-full bg-customColor-dark p-10 backdrop-blur-sm grid grid-flow-row gap-4
+            className="w-full bg-customColor-dark p-6 md:p-10 backdrop-blur-sm grid grid-flow-row gap-4
         md:grid-cols-6 md:col-span-4"
           >
             <div className="flex flex-col col-span-6 md:col-span-3">

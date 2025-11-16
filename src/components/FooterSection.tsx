@@ -2,7 +2,7 @@ import ImageAssets from "./AssetContainer";
 
 const FooterSection = () => {
   return (
-    <footer className="w-full bg-white/10 text-white py-8 border-t-4 border-customColor-primary relative">
+    <footer className="w-full bg-customColor-dark text-white py-8 border-t-4 border-customColor-primary relative">
       <div
         className="bg-customColor-primary w-40 sm:w-80 h-10 sm:h-14 absolute top-0 left-0"
         style={{ clipPath: "polygon(0 0, 100% 0, 70% 100%, 0% 100%)" }}
@@ -18,7 +18,7 @@ const FooterSection = () => {
                 className="h-24 sm:h-24 md:h-48 w-auto"
               />
               <div className="text-center sm:text-left">
-                <h2 className="text-2xl font-StylishBold font-bold text-customColor-primary">
+                <h2 className="text-2xl font-Gemsbuck_bold font-bold text-customColor-primary">
                   RedCraft
                 </h2>
                 <p className="text-base mt-2 max-w-md">

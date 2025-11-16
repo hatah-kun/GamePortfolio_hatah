@@ -30,6 +30,7 @@ const ShowcaseSection = () => {
             className='section-format md:flex-row items-end md:items-center relative '
         >
             <div className="w-full flex flex-col items-center justify-center gap-4">
+
                 {/*<div className="w-full bg-customColor-primary v-clip-v1 p-4 md:p-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
                     <div className="w-full md:w-2/3">
                         <UnderLineLabel
@@ -52,9 +53,10 @@ const ShowcaseSection = () => {
                     </div>
                 </div>*/}
 
-                <div className="md:grid flex flex-col md:grid-cols-6 gap-4 md:gap-6 flex-grow w-full md:h-[600px]">
+                <div className="md:grid flex flex-col md:grid-cols-6 gap-10 md:gap-6 flex-grow w-full h-auto md:h-[600px]">
                     <div className="col-span-4  w-full min-h-[300px] md:min-h-[400px] md:h-full relative flex flex-col items-center justify-center group">
 
+                        {/*MUTE AND SHOW BUTTONS*/}
                         <div className="absolute top-2 right-2 md:top-4 md:right-4  text-white z-40 flex">
                             <button
                                 id="muteBtn"
@@ -72,9 +74,9 @@ const ShowcaseSection = () => {
                             </button>
                         </div>
 
-                        {/* preview area*/}
+                        {/* OLD preview area*/}
 
-
+                        {/*GAME INFO AREA*/}
                         <div
                             id="gameInfoGroup"
                             className="z-10 bg-gradient-to-r p-4 md:p-10 absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center transition-all duration-300"
@@ -100,6 +102,7 @@ const ShowcaseSection = () => {
                                 </div>
                             </div>
 
+                            {/*MEDIA*/}
                             <div className="flex flex-row w-full justify-center items-center md:justify-start gap-2 md:gap-4 self-start z-10">
                                 <img
                                     src=""
@@ -160,7 +163,7 @@ const ShowcaseSection = () => {
                 background: "linear-gradient(to top, #18181b 50%, transparent 100%)"
             }} />*/}
 
-            <div className="w-full h-full absolute top-10 left-0 flex items-center justify-center -z-20  overflow-hidden">
+            <div className="w-full h-full fixed top-0 left-0 flex items-center justify-center -z-30  overflow-hidden">
                 <img id="gameBG" alt="Game Background" className="w-full" />
                 <video
                     id="videoBg"

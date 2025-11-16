@@ -46,12 +46,12 @@ const NavBar = () => {
                     alt="Icon"
                     className="h-14 w-auto mr-2"
                 />
-                <span className="text-white font-StylishBold text-xl   md:text-4xl tracking-widest">
+                <span className="hidden md:block text-white font-StylishBold text-xl md:text-4xl tracking-widest">
                   <HyperText
                       as={"p"}
                       startOnView={false}
                       duration={1000}
-                      className=" font-StylishBold"
+                      className=" font-Gemsbuck_bold"
                   > RedCraft
                   </HyperText>
                 </span>

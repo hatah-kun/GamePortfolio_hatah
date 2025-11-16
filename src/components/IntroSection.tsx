@@ -11,16 +11,16 @@ const IntroSection = () => {
         <RetroGrid opacity={0.12} />
 
         <div className={"section-format"}>
-            <div className="h-full w-full flex flex-col items-center justify-center gap-16 md:gap-40 relative">
+            <div className="h-auto w-full flex flex-col items-center justify-center gap-16 md:gap-40 relative">
 
                 <div className="w-full flex flex-col md:flex-row justify-start md:justify-evenly items-start md:items-center m-4 md:m-9 gap-4 md:gap-0">
-                    <HyperText as={"h1"} className="text-5xl sm:text-4xl md:text-7xl font-Gemsbuck_regular text-left ">
+                    <HyperText as={"h1"} className="intro-TitleTextStyle headerText">
                         JOHN ABIEL
                     </HyperText>
-                    <HyperText as={"h1"} className="text-5xl sm:text-4xl md:text-7xl font-Gemsbuck_regular text-left ">
+                    <HyperText as={"h1"} className="intro-TitleTextStyle headerText">
                         Nicolas
                     </HyperText>
-                    <HyperText as={"h1"} className="text-5xl sm:text-4xl md:text-7xl font-Gemsbuck_regular text-left ">
+                    <HyperText as={"h1"} className="intro-TitleTextStyle headerText">
                         PORTFOLIO
                     </HyperText>
                 </div>

@@ -3,106 +3,117 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Gemsbuck_thin";
-  src: url("/src/assets/Gemsbuck 01 Thin.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Gemsbuck_thin";
+    src: url("/src/assets/Gemsbuck 01 Thin.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Gemsbuck_bold";
-  src: url("/src/assets/Gemsbuck 01 Bold.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Gemsbuck_bold";
+    src: url("/src/assets/Gemsbuck 01 Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Gemsbuck";
-  src: url("/src/assets/Gemsbuck 01 Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Gemsbuck";
+    src: url("/src/assets/Gemsbuck 01 Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Galyon";
-  src: url("/src/assets/Galyon-Book.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Galyon";
+    src: url("/src/assets/Galyon-Book.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "LogikaNova";
-  src: url("/src/assets/LogikaNova-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "LogikaNova";
+    src: url("/src/assets/LogikaNova-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  @apply font-NormalFont;
+    @apply font-NormalFont;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
     height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: theme("colors.customColor.primary");
+    background: theme("colors.customColor.primary");
 }
 
 @layer components {
-  .nav-btn {
-    @apply border-r-8 border-transparent p-3 flex justify-center font-Gemsbuck_thin tracking-widest 
-    transform -skew-x-12 bg-white text-customColor-dark 
-    
-    hover:animate-rectBackwards hover:border-customColor-primary 
-    active:bg-customColor-primary active:text-white 
-    md:border-r-2 md:active:bg-white md:active:text-customColor-primary 
-    active:border-r-white md:bg-transparent md:text-white md:hover:border-white md:hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300 ease-in-out;
-  }
+
+    .headerText{
+        @apply text-7xl font-Gemsbuck_bold  tracking-widest text-center;
+    }
+
+    .nav-btn {
+        @apply border-r-8 border-transparent p-3 flex justify-center font-Gemsbuck_thin tracking-widest
+        transform -skew-x-12 bg-white text-customColor-dark
+
+        hover:animate-rectBackwards hover:border-customColor-primary
+        active:bg-customColor-primary active:text-white
+        md:border-r-2 md:active:bg-white md:active:text-customColor-primary
+        active:border-r-white md:bg-transparent md:text-white md:hover:border-white md:hover:bg-white/10 hover:backdrop-blur-sm transition-all duration-300 ease-in-out;
+    }
 
     .section-format{
         @apply min-h-screen w-full flex justify-center items-center p-5 py-20 md:p-12  border-orange-200;
     }
 
-  .section-format > div:first-child {
+    .section-format > div:first-child {
         @apply md:w-10/12;
     }
 
-  .form-label {
-    @apply text-lg;
-  }
 
-  .form-text-input {
-    clip-path: polygon(calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%, 0 0);
-    @apply bg-black/50 text-white text-lg border-l-2 border-customColor-primary px-5 py-3;
-  }
+    .intro-TitleTextStyle{
+        text-align: center;
+        @apply w-full;
+    }
 
-  .v-clip {
-    clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
-  }
-  .v-clip-v1 {
-    clip-path: polygon(
-      0 0,
-      calc(100% - 10px) 0,
-      100% 10px,
-      100% 100%,
-      10px 100%,
-      0 calc(100% - 10px)
-    );
-  }
+    .form-label {
+        @apply text-lg;
+    }
+
+    .form-text-input {
+        clip-path: polygon(calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%, 0 0);
+        @apply bg-black/50 text-white text-lg border-l-2 border-customColor-primary px-5 py-3;
+    }
+
+    .v-clip {
+        clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+    }
+    .v-clip-v1 {
+        clip-path: polygon(
+                0 0,
+                calc(100% - 10px) 0,
+                100% 10px,
+                100% 100%,
+                10px 100%,
+                0 calc(100% - 10px)
+        );
+    }
 
     .screenShot-img{
         @apply w-full w-[30%] md:w-[180px] hover:-translate-y-2 transition-all duration-300 border-2 border-customColor-dark;
@@ -110,8 +121,8 @@ body {
 
     /* ----BUTTONS---*/
 
-   .button-arrow {
-      @apply p-2 relative outline-none;
+    .button-arrow {
+        @apply p-2 relative outline-none;
     }
 
     .button-arrow::before {
@@ -132,93 +143,93 @@ body {
     }
 
 
-  .button-shape {
-    clip-path: polygon(
-      0 0,
-      calc(100% - 10px) 0,
-      100% 10px,
-      100% 100%,
-      10px 100%,
-      0 calc(100% - 10px)
-    );
+    .button-shape {
+        clip-path: polygon(
+                0 0,
+                calc(100% - 10px) 0,
+                100% 10px,
+                100% 100%,
+                10px 100%,
+                0 calc(100% - 10px)
+        );
 
-    @apply px-5 py-3;
-  }
+        @apply px-5 py-3;
+    }
 
-  .writingMode-v {
-    writing-mode: vertical-lr;
-  }
+    .writingMode-v {
+        writing-mode: vertical-lr;
+    }
 
-  .background-coverImage {
-    background-image: url("./assets/DSC05606_black.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+    .background-coverImage {
+        background-image: url("./assets/DSC05606_black.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-  }
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 10% 3.9%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.5rem;
+    }
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 }
